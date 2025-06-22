@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Best Blood Test & Diagnostics in Nellore | Skystrem Labs</title>
+<style>
+  /* Reset & Base Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #0d0d0d;
+  }
+
+  /* Background Video & Overlay */
+  #bg-video {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: -1;
+  }
+
+  /* Header */
+  header {
+    background: linear-gradient(135deg, #00c3ff, #ffff1c);
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  }
+
+  header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    color: #fff;
+    letter-spacing: 2px;
+  }
+
+  /* Navigation */
+  nav {
+    display: flex;
+    justify-content: center;
+    background-color: #006666;
+    padding: 14px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background 0.3s, transform 0.2s;
+  }
+
+  nav a:hover {
+    background-color: #008080;
+    transform: translateY(-2px);
+  }
+
+  /* Main Container */
+  .container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 25px;
+    background: rgba(255,255,255,0.07);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  }
+
+  /* Headings */
+  h2 {
+    font-size: 2.3rem;
+    color: #ffd700;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ffd700;
+    padding-bottom: 8px;
+  }
+
+  /* Paragraphs */
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+
+  /* Lists */
+  ul {
+    margin-left: 25px;
+    margin-bottom: 20px;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  /* Service & Test Cards */
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 20px;
+  }
+
+  .card {
+    flex: 1 1 calc(50% - 20px);
+    background: rgba(255,255,255,0.2);
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  }
+
+  .card h3 {
+    margin-bottom: 12px;
+    color: #ffd700;
+    font-size: 1.4rem;
+  }
+
+  /* Price Table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    font-size: 1rem;
+  }
+
+  th, td {
+    padding: 14px;
+    border: 1px solid #ffd700;
+    text-align: center;
+  }
+
+  th {
+    background-color: #ff8c00;
+    color: #fff;
+    font-size: 1.1rem;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: rgba(255,255,255,0.05);
+  }
+
+  /* Full Test List Table */
+  table.fulltest {
+    margin-top: 40px;
+  }
+
+  /* Gallery */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 40px;
+  }
+
+  .gallery img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  }
+
+  /* Contact Buttons */
+  .contact-section {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 14px 28px;
+    margin: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+    text-decoration: none;
+  }
+
+  .btn-primary {
+    background-color: #e67e22;
+    color: #fff;
+  }
+
+  .btn-primary:hover {
+    background-color: #d35400;
+    transform: translateY(-2px);
+  }
+
+  .btn-whatsapp {
+    background-color: #25D366;
+    color: #fff;
+  }
+
+  .btn-whatsapp:hover {
+    background-color: #128C7E;
+    transform: scale(1.05);
+  }
+
+  /* Floating Call Button */
+  .float-call {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 70px;
+    height: 70px;
+    background-color: #e74c3c;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    z-index: 999;
+  }
+
+  .float-call:hover {
+    background-color: #c0392b;
+    transform: scale(1.1);
+  }
+
+  /* Footer */
+  footer {
+    background: #1a1a1a;
+    padding: 30px 20px;
+    margin-top: 60px;
+    text-align: center;
+    font-size: 0.95rem;
+  }
+
+  footer p {
+    margin: 8px 0;
+  }
+
+  footer a {
+    color: #ffd700;
+    margin: 0 12px;
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  /* Lightbox */
+  #lightbox {
+    display: none;
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.8);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+  #lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.8);
+  }
+</style>
+</head>
+<body>
+
+<!-- Background Video -->
+<video id="bg-video" autoplay muted loop>
+  <!-- Replace with a relevant Nellore video URL or placeholder -->
+  <source src="img/Nellore v.webm" type="video/mp4" />
+  Your browser does not support HTML5 video.
+</video>
+<div class="overlay"></div>
+
+<!-- Header -->
+<header>
+  <h1>Nellore’s Leading Blood & Diagnostic Testing Center | Skystrem Labs</h1>
+</header>
+
+<!-- Navigation -->
+<nav>
+  <a href="#about">About Us</a>
+  <a href="#services">Our Services</a>
+  <a href="#packages">Health Packages</a>
+  <a href="#fulltest">Test Details</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Get in Touch</a>
+</nav>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <img src="" alt="Enlarged Image" />
+</div>
+
+<!-- Main Content -->
+<div class="container" id="about">
+  <!-- Welcome Image -->
+  <section>
+    <img src="img/Nellore1.jpeg" alt="Nellore Diagnostic Lab" style="width:100%; border-radius:15px; margin-bottom:20px; box-shadow:0 4px 15px rgba(0,0,0,0.3);"/>
+  </section>
+
+  <!-- Welcome Text -->
+  <section>
+    <h2>Trusted Diagnostic & Blood Testing Solutions in Nellore</h2>
+    <p>At Skystrem Labs, we provide comprehensive blood testing services tailored to meet the health needs of Nellore residents. Our modern laboratories ensure rapid, precise results, whether you visit us physically or opt for our convenient home sample collection. Our mission is to make health monitoring accessible, affordable, and reliable for everyone in the region.</p>
+    <p>From routine health checks to specialized diagnostics, our services are designed to empower you with accurate health insights. Our dedicated team of professionals ensures every test is conducted with care, accuracy, and confidentiality—delivering results that you can trust.</p>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section>
+    <h2>Why Patients in Nellore Prefer Skystrem Diagnostics</h2>
+    <ul>
+      <li>Accredited NABL Labs for Unmatched Precision</li>
+      <li>Fast Turnaround with Same-Day Reports</li>
+      <li>Home Sample Collection for Maximum Convenience</li>
+      <li>Secure Digital Reports Accessible Anytime</li>
+      <li>Affordable Pricing Starting at Just ₹499</li>
+      <li>Experienced Pathologists & Lab Experts</li>
+      <li>State-of-the-Art Equipment & Technology</li>
+      <li>Customer-centric Approach & Support</li>
+    </ul>
+  </section>
+
+  <!-- Top Tests & Diagnostics -->
+  <section>
+    <h2>Popular Blood Tests & Diagnostics We Offer</h2>
+    <ul>
+      <li>Complete Blood Count (CBC) for General Well-being</li>
+      <li>Thyroid Function Tests</li>
+      <li>Blood Sugar & HbA1c for Diabetes Management</li>
+      <li>Lipid & Cholesterol Panel</li>
+      <li>Liver & Kidney Function Tests</li>
+      <li>Vitamin D & B12 Deficiency Tests</li>
+      <li>COVID-19 RT-PCR & Antibody Tests</li>
+      <li>Cancer Screening Markers</li>
+      <li>Hormonal Profiles (Fertility & Reproductive)</li>
+      <li>Allergy & Immunology Tests</li>
+      <li>Specialized Tests for Heart & Metabolic Health</li>
+      <li>Infection & Microbiology Tests</li>
+      <li>Custom Health Checkup Packages</li>
+    </ul>
+  </section>
+
+  <!-- Full Test List -->
+  <section id="fulltest">
+    <h2>Comprehensive List of Diagnostic Tests</h2>
+    <table class="fulltest">
+      <thead>
+        <tr>
+          <th>Test Name</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>CBC</td><td>Complete Blood Count to assess overall health and detect anemia</td></tr>
+        <tr><td>Thyroid Panel</td><td>Evaluation of thyroid gland function</td></tr>
+        <tr><td>Blood Glucose Tests</td><td>Fasting & post-meal glucose for diabetes screening</td></tr>
+        <tr><td>Lipid Profile</td><td>Cholesterol, triglycerides, HDL & LDL levels</td></tr>
+        <tr><td>Liver & Kidney Function</td><td>Assess vital organ health</td></tr>
+        <tr><td>Vitamin D & B12</td><td>Check for deficiencies affecting immunity & energy</td></tr>
+        <tr><td>Cancer Markers</td><td>Markers like PSA, CA-125 for early detection</td></tr>
+        <tr><td>Hormonal Tests</td><td>Fertility, reproductive, and hormonal balance</td></tr>
+        <tr><td>Allergy Panel</td><td>Identify allergen sensitivities</td></tr>
+        <tr><td>COVID-19 RT-PCR</td><td>Detect active COVID infection</td></tr>
+        <!-- Add more tests as needed -->
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Packages & Pricing -->
+  <section id="packages">
+    <h2>Health Packages & Competitive Pricing</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Package / Test</th>
+          <th>Price (INR)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Basic Wellness Check</td><td>₹499</td></tr>
+        <tr><td>Advanced Health Screening</td><td>₹1499</td></tr>
+        <tr><td>Thyroid & Vitamin Panel</td><td>₹1099</td></tr>
+        <tr><td>Women's Health Package</td><td>₹1599</td></tr>
+        <tr><td>Senior Citizen Special</td><td>₹1899</td></tr>
+        <tr><td>Complete Body Checkup</td><td>₹2499</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Infrastructure & Expert Team -->
+  <section>
+    <h2>Our Advanced Diagnostic Infrastructure & Expert Team</h2>
+    <ul>
+      <li>High-Precision Automated Analyzers</li>
+      <li>Secure Barcode & Sample Tracking System</li>
+      <li>Hygienic & Sterile Laboratory Environment</li>
+      <li>Dual Report Verification & Quality Checks</li>
+      <li>AI-Enabled Error Detection & Data Validation</li>
+    </ul>
+    <p>Our team comprises experienced pathologists, biochemists, microbiologists, radiologists, and dedicated support staff committed to delivering accurate and timely results. We prioritize patient comfort, confidentiality, and trust in every service we offer.</p>
+  </section>
+
+  <!-- Home Sample Collection -->
+  <section>
+    <h2>Home Sample Collection in Nellore</h2>
+    <p>Enjoy the convenience of testing from your home with our reliable sample pickup service:</p>
+    <h3>Simple Steps to Book:</h3>
+    <ol>
+      <li>Book your appointment online or via call</li>
+      <li>Choose your preferred date & time slot</li>
+      <li>Our trained phlebotomist visits your location</li>
+      <li>Samples are collected safely and hygienically</li>
+      <li>Results are processed and shared within 24 hours</li>
+      <li>Get reports immediately via WhatsApp or email</li>
+    </ol>
+    <p>We serve all areas of Nellore and nearby localities, including:</p>
+    <ul>
+      <li>Downtown Nellore</li>
+      <li>Rural villages and outskirts</li>
+      <li>Suburban localities</li>
+    </ul>
+  </section>
+</div>
+
+<!-- Pricing Details -->
+<div class="container" id="prices" style="margin-top:50px;">
+  <h2>Detailed Blood Test Pricing in Nellore</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Test Name</th>
+        <th>Price (INR)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>CBC</td><td>₹599</td></tr>
+      <tr><td>Lipid Profile</td><td>₹1399</td></tr>
+      <tr><td>Blood Sugar & HbA1c</td><td>₹799</td></tr>
+      <tr><td>Thyroid Panel</td><td>₹1099</td></tr>
+      <tr><td>Liver & Kidney Tests</td><td>₹1199</td></tr>
+      <tr><td>Vitamin D & B12</td><td>₹999</td></tr>
+      <tr><td>Cancer Markers</td><td>₹1799</td></tr>
+      <tr><td>COVID-19 RT-PCR</td><td>₹2200</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Gallery -->
+<h3 style="text-align:center; margin-top:50px;">📸 Nellore Lab Visual Tour</h3>
+<div class="gallery" id="gallery">
+  <img src="img/Nellore2.avif" alt="Laboratory Equipment" />
+  <img src="img/Nellore3.jpg" alt="Sample Collection Process" />
+  <img src="img/Nellore4.jpeg" alt="Testing in Progress" />
+  <img src="img/Nellore5.jpg" alt="Lab Interior" />
+  <img src="img/Nellore6.jpg" alt="Our Expert Team" />
+</div>
+
+<!-- Contact & Call to Action -->
+<div class="contact-section" id="contact" style="margin-top:50px;">
+  <h2>Connect & Book Your Test in Nellore</h2>
+  <p><strong>Phone:</strong> 9646782839 (24/7 Support)</p>
+  <p><strong>WhatsApp:</strong> <a href="https://wa.me/919646782839" style="color:#25D366; text-decoration:underline;">Click to Chat</a></p>
+  <p><strong>Address:</strong> Near Nellore Railway Station, Nellore</p>
+  <p><strong>Working Hours:</strong> 6:30 AM - 9:00 PM (Sample Collection & Reports)</p>
+  <p><strong>Email:</strong> <a href="mailto:nellore@skystremlabs.com" style="color:#ff9999;">nellore@skystremlabs.com</a></p>
+  <div>
+    <a class="btn btn-primary" href="tel:+919646782839">📲 Book Home Testing</a>
+    <a class="btn btn-whatsapp" href="https://wa.me/919646782839" target="_blank">💬 Chat on WhatsApp</a>
+  </div>
+</div>
+
+<!-- Floating Call Button -->
+<div class="float-call" title="Call Now" onclick="window.location.href='tel:9646782839'">📞</div>
+
+<!-- Footer -->
+<footer>
+  <p>
+    <a href="#about">About Us</a> | 
+    <a href="#services">Services</a> | 
+    <a href="#packages">Packages</a> | 
+    <a href="#fulltest">Tests List</a> | 
+    <a href="#gallery">Gallery</a> | 
+    <a href="#contact">Contact</a>
+  </p>
+  <p>© 2025 Skystrem Labs, Nellore. All rights reserved.</p>
+</footer>
+
+<!-- Lightbox Script -->
+<script>
+  const galleryImgs = document.querySelectorAll('.gallery img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('img');
+
+  galleryImgs.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+    });
+  });
+  lightbox.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+</script>
+</body>
+</html>

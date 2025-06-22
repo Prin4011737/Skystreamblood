@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fazilka Blood Test Services - Skystrem Agency</title>
+    <!-- SEO Meta Tags -->
+  <meta name="description" content="Skystrem Blood Test Agency in Fazilka offers NABL-certified blood testing, home sample collection, quick results, and trusted diagnostics. Your health, our priority." />
+  <meta name="keywords" content="Fazilka blood test, diagnostic labs Fazilka, NABL certified labs Fazilka, blood testing Fazilka, health checkups Fazilka, COVID testing Fazilka" />
+  <meta name="author" content="Skystrem Blood Test Agency" />
+
+  <!-- Social Media / Open Graph Meta Tags -->
+  <meta property="og:title" content="Fazilka Blood Test Services | Skystrem Agency" />
+  <meta property="og:description" content="Reliable, NABL-certified blood tests with home sample collection and fast reports in Fazilka. Trust Skystrem for your health." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourwebsite.com" /> <!-- Replace with your actual URL -->
+  <meta property="og:image" content="https://yourwebsite.com/img/logo.png" /> <!-- Replace with your actual image URL -->
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fazilka Blood Test Services | Skystrem Agency" />
+  <meta name="twitter:description" content="Trusted NABL-certified diagnostics with home sample collection in Fazilka. Fast results and affordable packages." />
+  <meta name="twitter:image" content="https://yourwebsite.com/img/logo.png" /> <!-- Replace with your actual image URL -->
+  <style>
+    
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  background-color: #121212; /* Dark background for a sleek look */
+}
+
+/* Background Video Styles */
+#bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -2;
+  object-fit: cover;
+}
+
+/* Overlay for dark effect on video */
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(18, 18, 18, 0.6);
+  z-index: -1;
+}
+
+/* Header Styles */
+header {
+  background: linear-gradient(135deg, #d50000, #b30000);
+  color: #fff;
+  text-align: center;
+  padding: 25px 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-bottom: 2px solid #ff4d4d;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+}
+
+header p {
+  margin: 8px 0;
+  font-size: 1.1rem;
+}
+
+/* Navigation Styles */
+nav {
+  background-color: #a00000;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 12px 10px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  
+  /* Added for height control */
+  max-height: 80vh; /* Limit height to 80% of viewport height */
+  overflow-y: auto; /* Enable scrolling if content exceeds max height */
+}
+
+nav a {
+  color: #fff;
+  margin: 8px 16px;
+  padding: 8px 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  border-radius: 4px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Main Content Styles */
+.content {
+  max-width: 950px;
+  margin: 30px auto;
+  padding: 30px 25px;
+  background-color: rgba(0, 0, 0, 0.75);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+/* Headings */
+h2 {
+  color: #ff4d4d;
+  font-size: 2rem;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #ff4d4d;
+}
+
+h3 {
+  color: #ff4d4d;
+  font-size: 1.7rem;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+h4 {
+  font-size: 1.4rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Lists */
+ul {
+  margin: 15px 0 20px 25px;
+  list-style-type: disc;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* Image Styles */
+.hero-img, .gallery-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Gallery Grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 30px;
+}
+
+/* Buttons */
+.btn-container {
+  text-align: center;
+  margin: 35px 0;
+}
+
+.call-btn, .whatsapp-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  margin: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s, box-shadow 0.2s, transform 0.2s;
+}
+
+.call-btn {
+  background-color: #ff5252;
+  color: #fff;
+}
+
+.call-btn:hover {
+  background-color: #e53935;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(229, 57, 53, 0.3);
+}
+
+.whatsapp-btn {
+  background-color: #25D366;
+  color: #fff;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1DA851;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+/* Testimonials & FAQ */
+.testimonial {
+  background-color: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-left: 4px solid #ff4d4d;
+  margin: 25px 0;
+  border-radius: 8px;
+  font-style: italic;
+}
+
+.testimonial-author {
+  font-weight: bold;
+  text-align: right;
+  color: #ff9999;
+  margin-top: 12px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  background-color: rgba(255,77,77,0.1);
+  padding: 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.faq-item:hover {
+  background-color: rgba(255,77,77,0.2);
+}
+
+.faq-question {
+  font-weight: bold;
+  color: #ff4d4d;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+/* Health Tip */
+.health-tip {
+  background-color: rgba(255,77,77,0.2);
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+  border-left: 4px solid #ff4d4d;
+  font-size: 1.1rem;
+}
+
+.health-tip strong {
+  color: #ff4d4d;
+}
+
+/* Footer Styles */
+footer {
+  background: linear-gradient(135deg, #d50000, #b30000);
+  color: #fff;
+  text-align: center;
+  padding: 25px 20px;
+  margin-top: 40px;
+  box-shadow: inset 0 1px 4px rgba(255,255,255,0.2);
+}
+
+footer p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+footer a {
+  color: #fff;
+  margin: 0 12px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #ffcccb;
+}
+
+/* Floating Call Button */
+.floating-call-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #ff5252;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 999;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.floating-call-btn:hover {
+  background-color: #e53935;
+  transform: scale(1.1);
+}
+
+/* Responsive Adjustments */
+@media(max-width: 768px){
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    margin: 8px 0;
+  }
+
+  .content {
+    padding: 20px 15px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .call-btn, .whatsapp-btn {
+    width: 90%;
+    display: block;
+    margin: 12px auto;
+  }
+
+  .floating-call-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+</style>
+</head>
+<body>
+  <video autoplay muted loop id="bg-video">
+    <source src="Video/2.mp4" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
+  <div class="video-overlay"></div>
+
+  <header>
+    <h1>Fazilka Branch</h1>
+    <p>Skystrem Blood Test Agency - Trusted. Fast. Accurate.</p>
+    <p style="font-size:1rem; margin-top:10px;">Providing Reliable Diagnostic Services in Fazilka and Surrounding Areas for Over a Decade</p>
+  </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#tests">Tests</a>
+    <a href="#prices">Prices</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Lightbox Modal for Images -->
+  <div id="lightboxOverlay">
+    <img id="lightboxImg" src="" alt="Lab Image" />
+  </div>
+
+  <!-- Main Content: Inserted comprehensive content here -->
+  <div class="content" id="home">
+    <!-- You can keep the hero image or replace it with your own -->
+    <img class="hero-img" src="img/IMG-20250526-WA0069.jpg" alt="Fazilka Clinic" />
+
+    <!-- Start of my integrated detailed content -->
+    <h2>Welcome to Skystrem Blood Test Agency - Your Trusted Partner for the Best Blood Tests & Checkups</h2>
+    <p>
+    At Skystrem Blood Test Agency, we are committed to providing the highest quality blood testing and health checkup services in Fazilka and surrounding areas. Our mission is to help you lead a healthier life through accurate diagnostics, timely results, and personalized care. Whether you need routine health screening, specialized tests, or comprehensive diagnostics, we are your trusted partner for the best blood tests.
+    </p>
+    <p>
+    In today’s fast-paced world, health is wealth. Early detection through the best blood tests can prevent serious illnesses and promote long-term wellness. Our state-of-the-art laboratories, experienced healthcare professionals, and customer-centric approach ensure that you receive reliable, fast, and affordable blood testing services.
+    </p>
+    <h2>Why Choose Skystrem for the Best Blood Tests & Checkups?</h2>
+    <ul>
+      <li><strong>Accurate & Reliable Results:</strong> Our laboratories are NABL accredited and follow international standards to ensure the highest accuracy and reliability in every test.</li>
+      <li><strong>Advanced Technology:</strong> We use the latest equipment and technology to deliver precise diagnostics for all health conditions.</li>
+      <li><strong>Experienced Professionals:</strong> Our team comprises qualified pathologists, phlebotomists, and healthcare experts dedicated to your health and safety.</li>
+      <li><strong>Comprehensive Test Menu:</strong> Over 200 tests covering routine health checkups, disease diagnosis, genetic testing, and more.</li>
+      <li><strong>Patient-Centric Service:</strong> Friendly staff, home sample collection, quick turnaround times, and transparent pricing.</li>
+      <li><strong>Convenient Location & Accessibility:</strong> Easily accessible in Fazilka with mobile services and home collection options.</li>
+      <li><strong>Affordable Pricing & Insurance Support:</strong> Competitive prices with support for insurance claims and health card discounts.</li>
+    </ul>
+    <h2>The Importance of Regular Blood Tests & Checkups</h2>
+    <p>
+    Blood tests are vital tools for maintaining good health. They help detect potential health issues before symptoms appear, allowing for early intervention and better management. Regular health checkups can uncover hidden conditions such as diabetes, high cholesterol, thyroid disorders, infections, anemia, and more.
+    </p>
+    <p>
+    For individuals with a family history of certain diseases, chronic conditions, or those over 40, routine blood testing becomes even more crucial. Prevention through early detection saves lives, reduces healthcare costs, and improves quality of life.
+    </p>
+    <h2>Our Comprehensive Blood Test & Checkup Packages</h2>
+    <p>
+    We offer customized packages tailored to your age, gender, health concerns, and lifestyle. Our packages include:
+    </p>
+    <ul>
+      <li><strong>Basic Health Checkup:</strong> CBC, Blood Sugar, Lipid Profile, Liver & Kidney Function Tests</li>
+      <li><strong>Complete Wellness Screening:</strong> Includes Thyroid Panel, Vitamin D, Calcium, HbA1c, and more</li>
+      <li><strong>Senior Citizen Packages:</strong> Focused on age-related health risks, including Prostate, PSA, Bone Density, etc.</li>
+      <li><strong>Women's Health Packages:</strong> Pregnancy Tests, Hormone Profiles, PCOS, and Fertility Tests</li>
+      <li><strong>Men's Health Packages:</strong> Prostate Tests, Cardiac Markers, Testosterone Levels</li>
+      <li><strong>Disease Specific Tests:</strong> COVID-19 RT-PCR and Antibody, Hepatitis B & C, HIV, Malaria, Dengue, Chikungunya, TB</li>
+      <li><strong>Advanced & Specialized Tests:</strong> Genetic Testing, Cancer Markers, Cardiac Risk, Heavy Metal Analysis</li>
+    </ul>
+    <h2>Our Top Blood Tests for Optimal Health</h2>
+    <h3>Routine Blood Tests</h3>
+    <ul>
+      <li><strong>Complete Blood Count (CBC):</strong> Detects anemia, infections, blood disorders.</li>
+      <li><strong>Lipid Profile:</strong> Measures cholesterol levels to assess heart disease risk.</li>
+      <li><strong>Blood Glucose & HbA1c:</strong> Monitors diabetes and pre-diabetes conditions.</li>
+      <li><strong>Liver Function Tests (LFT):</strong> Checks liver health and detects liver diseases.</li>
+      <li><strong>Kidney Function Tests (KFT):</strong> Assesses kidney health and function.</li>
+      <li><strong>Thyroid Panel:</strong> Evaluates thyroid hormone levels affecting metabolism and energy.</li>
+    </ul>
+    <h3>Infection & Disease Tests</h3>
+    <ul>
+      <li><strong>COVID-19 RT-PCR & Antibody:</strong> For diagnosis and immunity assessment.</li>
+      <li><strong>Hepatitis B & C:</strong> Screening for liver infections.</li>
+      <li><strong>HIV & STD Tests:</strong> Confidential testing for sexually transmitted infections.</li>
+      <li><strong>Malaria & Dengue:</strong> Rapid diagnosis of tropical diseases.</li>
+      <li><strong>TB Test (Quantiferon Gold):</strong> Detects latent and active tuberculosis infections.</li>
+    </ul>
+    <h3>Women's & Children's Health Tests</h3>
+    <ul>
+      <li><strong>Pregnancy Tests (Beta HCG):</strong> Fast, accurate testing for early pregnancy detection.</li>
+      <li><strong>Fertility & Hormonal Tests:</strong> PCOS, FSH, LH, Prolactin, Testosterone.</li>
+      <li><strong>Neonatal & Pediatric Tests:</strong> Newborn screening, vitamin levels, infection markers.</li>
+      <li><strong>Vitamin & Mineral Tests:</strong> Vitamin D, Calcium, Iron studies.</li>
+    </ul>
+    <h3>Advanced & Specialized Diagnostics</h3>
+    <ul>
+      <li><strong>Cancer Markers:</strong> PSA, CA-125, CEA, AFP.</li>
+      <li><strong>Cardiac Risk Markers:</strong> Troponin, CK-MB, Lipoprotein(a).</li>
+      <li><strong>Genetic & DNA Tests:</strong> Hereditary disorders, personalized health insights.</li>
+      <li><strong>Heavy Metal & Toxin Tests:</strong> Lead, Mercury, Arsenic exposure assessment.</li>
+    </ul>
+    <div class="health-tip">
+      <strong>Health Tip:</strong> Regular blood tests can help detect health issues before symptoms arise. Prevention is always better than cure. We recommend annual checkups for adults and bi-annual testing for those with chronic conditions or at-risk populations.
+    </div>
+  </div>
+
+  <!-- Price List Section -->
+  <div class="content" id="prices">
+    <h3>💰 Price List</h3>
+    <table style="width:100%; border-collapse: collapse; margin-top:20px; background-color: rgba(255,255,255,0.1); border-radius:8px;">
+      <thead>
+        <tr>
+          <th style="border: 1px solid #ff4d4d; padding:10px;">Test Name</th>
+          <th style="border: 1px solid #ff4d4d; padding:10px;">Price (INR)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">Complete Blood Count (CBC)</td>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">200</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">Liver Function Test (LFT)</td>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">500</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">Kidney Function Test (KFT)</td>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">400</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">Lipid Profile</td>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">600</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">Thyroid Profile</td>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">700</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">COVID-19 RT-PCR</td>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">1500</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">Hepatitis B & C</td>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">800</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">Pregnancy Test (Beta HCG)</td>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">300</td>
+        </tr>
+        <!-- Add more as needed -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Gallery Photos with click to view larger -->
+  <h3 style="margin:40px 0 20px 15px;">📸 Fazilka Lab Gallery</h3>
+  <div class="gallery" id="gallery">
+    <img class="gallery-img" src="img/IMG-20250526-WA0068.jpg" alt="Lab Equipment" />
+    <img class="gallery-img" src="img/IMG-20250526-WA0067.jpg" alt="Testing Process" />
+    <img class="gallery-img" src="img/IMG-20250526-WA0066.jpg" alt="Sample Collection" />
+    <img class="gallery-img" src="img/IMG-20250526-WA0065.jpg" alt="Laboratory Interior" />
+    <img class="gallery-img" src="img/IMG-20250526-WA0064.jpg" alt="Medical Staff" />
+    <img class="gallery-img" src="img/IMG-20250526-WA0063.jpg" alt="Testing Equipment" />
+    <img class="gallery-img" src="img/IMG-20250526-WA0055.jpg" alt="Sample Processing" />
+    <img class="gallery-img" src="img/IMG-20250526-WA0061.jpg" alt="Certification Display" />
+  </div>
+
+  <!-- Contact Section -->
+  <h3 id="contact" style="margin-top:40px;">📞 Contact Our Fazilka Center</h3>
+  <p><strong>Phone:</strong> 9646782839 (24/7 Helpline)</p>
+  <p><strong>WhatsApp:</strong> <a href="https://wa.me/919646782839" style="color:#25D366; text-decoration: underline;">Click to Chat</a></p>
+  <p><strong>Location:</strong> Near Civil Hospital, Main Bazaar Road, Fazilka, Punjab - 152123</p>
+  <p><strong>Timings:</strong> 7:00 AM to 7:00 PM (Home collection available 7 days a week)</p>
+  <p><strong>Email:</strong> <a href="mailto:support@skystrembloodtest.com" style="color:#ff9999;">support@skystrembloodtest.com</a></p>
+  <p><strong>Emergency Services:</strong> Available for critical cases (call for arrangements)</p>
+
+  <div class="btn-container">
+    <a class="call-btn" href="tel:+919646782839">📲 Book a Home Collection</a>
+    <a class="whatsapp-btn" href="https://wa.me/919646782839" target="_blank">💬 WhatsApp Us Now</a>
+  </div>
+
+  <div class="health-tip">
+    <strong>Did You Know?</strong> Many insurance providers now cover diagnostic tests. We accept all major health insurance cards and can assist with claim documentation.
+  </div>
+
+  <!-- Floating Call Button -->
+  <a href="tel:+919646782839" class="floating-call-btn" title="Call Now">📞</a>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      <a href="#home">Home</a> | 
+      <a href="#fazilka">Fazilka</a> | 
+      <a href="#privacy">Privacy Policy</a> | 
+      <a href="#terms">Terms of Service</a>
+    </p>
+    <p>© 2025 Skystrem Blood Test Agency. All rights reserved.</p>
+    <p>NABL Accredited | ISO 9001:2015 Certified | Recognized by Punjab Health Department</p>
+  </footer>
+
+  <!-- Script for Image Lightbox -->
+  <script>
+    // Get all gallery images
+    const galleryImages = document.querySelectorAll('.gallery-img');
+    const lightboxOverlay = document.getElementById('lightboxOverlay');
+    const lightboxImg = document.getElementById('lightboxImg');
+
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxOverlay.style.display = 'flex';
+      });
+    });
+
+    // Close lightbox on click
+    lightboxOverlay.addEventListener('click', () => {
+      lightboxOverlay.style.display = 'none';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ambala Blood Test Services - SkyStream Agency</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Reliable blood test services in Ambala by SkyStream. Over 200 tests, home sample collection, quick results, and NABL accreditation. Book now for accurate diagnostics." />
+  <meta name="keywords" content="Ambala blood test, blood testing Ambala, NABL certified labs Ambala, home sample collection Ambala, pathology lab Ambala" />
+  <meta name="author" content="SkyStream Blood Test Services" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph for social sharing -->
+  <meta property="og:title" content="Ambala Blood Test Services - SkyStream" />
+  <meta property="og:description" content="Get accurate blood tests in Ambala with SkyStream. Over 200 tests, home collection, rapid reports, NABL accreditation." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourwebsite.com/ambala-blood-tests" />
+  <meta property="og:image" content="https://yourwebsite.com/img/ambala-banner.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:title" content="Ambala Blood Test Services - SkyStream" />
+  <meta name="twitter:description" content="Trust SkyStream for blood testing in Ambala. Over 200 tests, home sample collection, quick reports, NABL accredited." />
+  <meta name="twitter:image" content="https://yourwebsite.com/img/ambala-banner.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <style>
+    #bg-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -2;
+      object-fit: cover;
+    }
+    .video-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(15, 2, 19, 0.75);
+      z-index: -1;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #fff;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #00695c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      margin-bottom: 10px;
+      font-size: 2.2rem;
+    }
+    nav {
+      background-color: #004d40;
+      text-align: center;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      text-decoration: underline;
+      color: #80cbc4;
+    }
+    .content {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.85);
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      border-radius: 10px;
+    }
+    h2, h3, h4 {
+      color: #ffd700;
+      margin: 20px 0 15px;
+    }
+    h2 {
+      font-size: 1.8rem;
+      border-bottom: 2px solid #ffd700;
+      padding-bottom: 8px;
+    }
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 30px;
+    }
+    h4 {
+      font-size: 1.3rem;
+      margin-top: 25px;
+    }
+    p {
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    /* Images */
+    .hero-img, .gallery-img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .gallery-img:hover {
+      transform: scale(1.02);
+    }
+    /* Gallery Grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+    /* Lists */
+    ul, ol {
+      margin: 15px 0 20px 25px;
+    }
+    li {
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+    /* Buttons */
+    .btn-container {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .call-btn, .whatsapp-btn {
+      color: white;
+      padding: 12px 25px;
+      margin: 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
+    .call-btn {
+      background-color: #e91e63;
+    }
+    .whatsapp-btn {
+      background-color: #25D366;
+    }
+    .call-btn:hover {
+      background-color: #ad1457;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(173, 20, 87, 0.4);
+    }
+    .whatsapp-btn:hover {
+      background-color: #128C7E;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(18, 140, 126, 0.4);
+    }
+    /* Footer Styles */
+    footer {
+      background-color: #00695c;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+    }
+    footer p {
+      margin-bottom: 10px;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: all 0.3s ease;
+    }
+    footer a:hover {
+      text-decoration: underline;
+      color: #80cbc4;
+    }
+    /* Floating Call Button */
+    .floating-call-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      background-color: #e91e63;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 999;
+      animation: pulse 1.5s infinite;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .floating-call-btn:hover {
+      background-color: #ad1457;
+      transform: scale(1.1);
+    }
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(233, 30, 99, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 15px rgba(233, 30, 99, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(233, 30, 99, 0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop id="bg-video">
+    <source src="img/Ambala v.mp4" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
+  <div class="video-overlay"></div>
+
+  <header>
+    <h1>Ambala Center</h1>
+    <p>SkyStream Blood Test Services - Trusted. Fast. Accurate.</p>
+    <p style="font-size:1rem; margin-top:10px;">Providing reliable diagnostic services in Ambala and nearby areas for over a decade</p>
+  </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#tests">Tests</a>
+    <a href="#prices">Prices</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Lightbox for Images -->
+  <div id="lightboxOverlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); align-items:center; justify-content:center; z-index:1000;">
+    <img id="lightboxImg" src="" alt="Lab Image" style="max-width:90%; max-height:90%; border-radius:8px; box-shadow:0 0 20px rgba(0,0,0,0.5);"/>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content" id="home">
+    <img class="hero-img" src="img/Ambala1.webp" alt="Ambala Blood Test" />
+
+    <h2>Reliable Blood Tests & Health Checkup Services in Ambala</h2>
+    <p>
+      Our advanced laboratories, experienced staff, and friendly service ensure quick, accurate results for your health needs in Ambala and nearby regions.
+    </p>
+    <h2>Why Choose Us in Ambala?</h2>
+    <ul>
+      <li><strong>Certified & Precise Results:</strong> NABL accredited labs adhering to strict standards.</li>
+      <li><strong>Latest Equipment:</strong> State-of-the-art technology for accurate diagnostics.</li>
+      <li><strong>Expert Team:</strong> Skilled doctors, technicians, and healthcare professionals.</li>
+      <li><strong>Wide Range of Tests:</strong> Over 200 tests including routine, specialized, and advanced diagnostics.</li>
+      <li><strong>Home Sample Collection:</strong> Convenient and safe sample pickup from your home.</li>
+      <li><strong>Affordable Pricing & Insurance Support:</strong> Competitive rates and insurance-friendly services.</li>
+    </ul>
+    <h2>Our Blood Test & Checkup Packages in Ambala</h2>
+    <p>Customized packages include:</p>
+    <ul>
+      <li>Basic Health Checkup</li>
+      <li>Wellness Screening</li>
+      <li>Senior Citizens Packages</li>
+      <li>Women & Children’s Health Packages</li>
+      <li>Disease-specific Testing</li>
+      <li>Advanced Diagnostic Tests</li>
+    </ul>
+    <h2>Top Blood Tests We Offer</h2>
+    <h3>Routine Tests</h3>
+    <ul>
+      <li>Complete Blood Count (CBC)</li>
+      <li>Lipid Profile</li>
+      <li>Blood Glucose & HbA1c</li>
+      <li>Liver & Kidney Function Tests</li>
+      <li>Thyroid Panel</li>
+    </ul>
+    <h3>Infection & Disease Tests</h3>
+    <ul>
+      <li>COVID-19 RT-PCR & Antibody Tests</li>
+      <li>Hepatitis B & C</li>
+      <li>HIV & STD Tests</li>
+      <li>Malaria & Dengue Tests</li>
+      <li>Tuberculosis Screening</li>
+    </ul>
+    <h3>Women & Children</h3>
+    <ul>
+      <li>Pregnancy Tests</li>
+      <li>Hormonal & Fertility Tests</li>
+      <li>Neonatal & Pediatric Tests</li>
+    </ul>
+    <h3>Advanced Diagnostics</h3>
+    <ul>
+      <li>Cancer Markers</li>
+      <li>Cardiac Markers</li>
+      <li>Genetic Testing</li>
+      <li>Heavy Metal Tests</li>
+    </ul>
+    <div class="health-tip">
+      <strong>Health Tip:</strong> Regular testing in Ambala helps detect health issues early and can be life-saving.
+    </div>
+  </div>
+
+  <!-- Price List -->
+  <div class="content" id="prices">
+    <h3>Prices in Ambala</h3>
+    <table style="width:100%; border-collapse: collapse; margin-top:20px; background-color: rgba(255,255,255,0.1); border-radius:8px;">
+      <thead>
+        <tr>
+          <th style="border: 1px solid #ffd700; padding:10px;">Test Name</th>
+          <th style="border: 1px solid #ffd700; padding:10px;">Price (INR)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="border: 1px solid #ffd700; padding:10px;">CBC</td>
+          <td style="border: 1px solid #ffd700; padding:10px;">250</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ffd700; padding:10px;">Lipid Profile</td>
+          <td style="border: 1px solid #ffd700; padding:10px;">700</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ffd700; padding:10px;">Blood Glucose & HbA1c</td>
+          <td style="border: 1px solid #ffd700; padding:10px;">300</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ffd700; padding:10px;">COVID-19 RT-PCR</td>
+          <td style="border: 1px solid #ffd700; padding:10px;">2000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Gallery -->
+  <h3 style="margin:40px 0 20px 15px;">📸 Ambala Lab Gallery</h3>
+  <div class="gallery" id="gallery">
+    <img class="gallery-img" src="img/Ambala2.jpeg" alt="Laboratory Equipment" />
+    <img class="gallery-img" src="img/Ambala3.jpg" alt="Testing Process" />
+    <img class="gallery-img" src="img/Ambala4.jpeg" alt="Sample Collection" />
+    <img class="gallery-img" src="img/Ambala5.webp" alt="Lab Interior" />
+  </div>
+
+  <!-- Contact -->
+  <h3 id="contact" style="margin-top:40px;">📞 Contact Our Ambala Center</h3>
+  <p><strong>Phone:</strong> 9646782839 (24/7 Helpline)</p>
+  <p><strong>WhatsApp:</strong> <a href="https://wa.me/919646782839" style="color:#25D366; text-decoration: underline;">Click to Chat</a></p>
+  <p><strong>Location:</strong> Near Ambala Cantt Railway Station, Haryana</p>
+  <p><strong>Timings:</strong> 6:00 AM to 8:00 PM (Home sample collection available)</p>
+  <p><strong>Email:</strong> <a href="mailto:info@ambalahealth.com" style="color:#ff9999;">info@ambalahealth.com</a></p>
+  <p><strong>Emergency Services:</strong> Available for critical cases, call for arrangements.</p>
+
+  <div class="btn-container">
+    <a class="call-btn" href="tel:+919646782839">📲 Book Home Collection</a>
+    <a class="whatsapp-btn" href="https://wa.me/919646782839" target="_blank">💬 WhatsApp Us Now</a>
+  </div>
+
+  <div class="health-tip">
+    <strong>Did You Know?</strong> Most insurance providers now cover diagnostic tests. We accept all major insurance cards.
+  </div>
+
+  <!-- Floating Call Button -->
+  <a href="tel:+919646782839" class="floating-call-btn" title="Call Now">📞</a>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      <a href="#home">Home</a> | 
+      <a href="#ambala">Ambala</a> | 
+      <a href="#privacy">Privacy Policy</a> | 
+      <a href="#terms">Terms of Service</a>
+    </p>
+    <p>© 2025 SkyStream Blood Test Services. All rights reserved.</p>
+    <p>NABL Accredited | ISO 9001:2015 Certified | Recognized by Haryana Health Department</p>
+  </footer>
+
+  <!-- Script for Lightbox -->
+  <script>
+    const galleryImages = document.querySelectorAll('.gallery-img');
+    const lightboxOverlay = document.getElementById('lightboxOverlay');
+    const lightboxImg = document.getElementById('lightboxImg');
+
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxOverlay.style.display = 'flex';
+      });
+    });
+
+    lightboxOverlay.addEventListener('click', () => {
+      lightboxOverlay.style.display = 'none';
+    });
+  </script>
+</body>
+</html>

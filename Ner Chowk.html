@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Best Blood Lab in Ner Chowk | Skystrem Labs</title>
+<meta name="description" content="Skystrem Labs is the leading blood testing and diagnostic center in Ner Chowk. Accurate, affordable, and reliable blood tests with home sample collection and quick reports." />
+<meta name="keywords" content="Best blood lab Ner Chowk, Diagnostic center Ner Chowk, Blood testing labs in Ner Chowk, Affordable blood tests Ner Chowk, NABL certified labs Ner Chowk, COVID testing Ner Chowk, Health checkup Ner Chowk" />
+<meta name="author" content="Skystrem Labs" />
+
+<style>
+  /* Reset & Basic Styling */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e2f;
+    color: #fff;
+    line-height: 1.6;
+  }
+
+  /* Background Video & Overlay */
+  #bg-video {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+  .overlay {
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.6);
+    z-index: -1;
+  }
+
+  /* Header */
+  header {
+    background: linear-gradient(135deg, #33a1c9, #2b86c5);
+    padding: 50px 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  }
+  header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    color: #fff;
+    letter-spacing: 2px;
+  }
+
+  /* Navigation */
+  nav {
+    display: flex;
+    justify-content: center;
+    background-color: #34568b;
+    padding: 14px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background 0.3s, transform 0.2s;
+  }
+  nav a:hover {
+    background-color: #3b5998;
+    transform: translateY(-2px);
+  }
+
+  /* Container Styles */
+  .container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 25px;
+    background: rgba(255,255,255,0.07);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+
+  /* Headings & Paragraphs */
+  h2 {
+    font-size: 2.3rem;
+    color: #ffd700;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ffd700;
+    padding-bottom: 8px;
+  }
+  p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+  }
+  ul {
+    margin-left: 25px;
+    margin-bottom: 20px;
+  }
+  li {
+    margin-bottom: 8px;
+  }
+
+  /* Cards for Services & Features */
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 20px;
+  }
+  .card {
+    flex: 1 1 calc(50% - 20px);
+    background: rgba(255,255,255,0.2);
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  }
+  .card h3 {
+    margin-bottom: 12px;
+    color: #ffd700;
+    font-size: 1.4rem;
+  }
+
+  /* Tables for Tests & Pricing */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    font-size: 1rem;
+  }
+  th, td {
+    padding: 14px;
+    border: 1px solid #ffd700;
+    text-align: center;
+  }
+  th {
+    background-color: #2b86c5;
+    color: #fff;
+    font-size: 1.1rem;
+  }
+  tbody tr:nth-child(even) {
+    background-color: rgba(255,255,255,0.05);
+  }
+  .fulltest {
+    margin-top: 40px;
+  }
+
+  /* Gallery Styles */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 40px;
+  }
+  .gallery img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  }
+
+  /* Call-to-Action Buttons */
+  .contact-section {
+    margin-top: 50px;
+    text-align: center;
+  }
+  .btn {
+    display: inline-block;
+    padding: 14px 28px;
+    margin: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+    text-decoration: none;
+  }
+  .btn-primary {
+    background-color: #e67e22;
+    color: #fff;
+  }
+  .btn-primary:hover {
+    background-color: #d35400;
+    transform: translateY(-2px);
+  }
+  .btn-whatsapp {
+    background-color: #25D366;
+    color: #fff;
+  }
+  .btn-whatsapp:hover {
+    background-color: #128C7E;
+    transform: scale(1.05);
+  }
+
+  /* Floating Call Button */
+  .float-call {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 70px;
+    height: 70px;
+    background-color: #e74c3c;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    z-index: 999;
+  }
+  .float-call:hover {
+    background-color: #c0392b;
+    transform: scale(1.1);
+  }
+
+  /* Footer Styles */
+  footer {
+    background: #111;
+    padding: 30px 20px;
+    margin-top: 60px;
+    text-align: center;
+    font-size: 0.95rem;
+  }
+  footer p {
+    margin: 8px 0;
+  }
+  footer a {
+    color: #ffd700;
+    margin: 0 12px;
+    text-decoration: none;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  /* Lightbox for Image Enlargements */
+  #lightbox {
+    display: none;
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.8);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  #lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 12px;
+  }
+</style>
+</head>
+<body>
+
+<!-- Background Video -->
+<video id="bg-video" autoplay muted loop>
+  <!-- Replace with scenic or lab video for Ner Chowk -->
+  <source src="img/Ner Chowkv.mp4" type="video/mp4" />
+  Your browser does not support HTML5 video.
+</video>
+<div class="overlay"></div>
+
+<!-- Header -->
+<header>
+  <h1>Top Blood Testing & Diagnostic Center in Ner Chowk | Skystrem Labs</h1>
+</header>
+
+<!-- Navigation -->
+<nav>
+  <a href="#about">About Us</a>
+  <a href="#services">Our Services</a>
+  <a href="#packages">Health Packages</a>
+  <a href="#tests">Test Details</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- Lightbox for Image Enlargements -->
+<div id="lightbox">
+  <img src="" alt="Enlarged Image" />
+</div>
+
+<!-- Main Content -->
+<div class="container" id="about">
+  <!-- Welcome Image -->
+  <section>
+    <img src="img/Ner chowk banner.png" alt="Ner Chowk Diagnostic Center" style="width:100%; border-radius:15px; margin-bottom:20px; box-shadow:0 4px 15px rgba(0,0,0,0.3);" />
+  </section>
+
+  <!-- About Us -->
+  <section>
+    <h2>Leading Blood Test & Diagnostic Lab in Ner Chowk</h2>
+    <p>Skystrem Labs is your trusted partner for reliable and accurate diagnostic services in Ner Chowk. We provide comprehensive blood tests, health screenings, and advanced diagnostics at affordable rates. Our NABL accreditation ensures high-quality results, delivered swiftly and securely. Whether you need routine checkups or specialized tests, we are committed to your health and well-being.</p>
+    <p>Our experienced team, modern lab facilities, and home sample collection options make us the preferred diagnostic center for residents of Ner Chowk. Trust us for fast, accurate, and confidential reports.</p>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section>
+    <h2>Why Choose Skystrem Labs in Ner Chowk</h2>
+    <ul>
+      <li>NABL Certified & Accredited Laboratory</li>
+      <li>Fast & Accurate Test Results within 24 Hours</li>
+      <li>Affordable Blood Tests Starting Rs. 499</li>
+      <li>Home Sample Collection in Ner Chowk</li>
+      <li>Latest Diagnostic Equipment & Technology</li>
+      <li>Experienced Pathologists & Lab Technicians</li>
+      <li>Hygienic & Patient-Friendly Environment</li>
+      <li>Digital Reports & 24/7 Customer Support</li>
+    </ul>
+  </section>
+
+  <!-- Test & Diagnostics Highlights -->
+  <section>
+    <h2>Popular Blood & Diagnostic Tests in Ner Chowk</h2>
+    <ul>
+      <li>Complete Blood Count (CBC)</li>
+      <li>Thyroid Function Test</li>
+      <li>Blood Glucose & HbA1c</li>
+      <li>Lipid Profile</li>
+      <li>Liver & Kidney Function Tests</li>
+      <li>Vitamin D & B12 Tests</li>
+      <li>COVID-19 RT-PCR & Antibody Tests</li>
+      <li>Cancer Markers & Tumor Screening</li>
+      <li>Hormonal & Reproductive Tests</li>
+      <li>Microbiology & Infection Tests</li>
+    </ul>
+  </section>
+
+  <!-- Complete Test List Table -->
+  <section id="tests">
+    <h2>Complete List of Diagnostic Tests at Skystrem Labs, Ner Chowk</h2>
+    <table class="fulltest">
+      <thead>
+        <tr>
+          <th>Test Name</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>CBC</td><td>Complete Blood Count for general health assessment.</td></tr>
+        <tr><td>Thyroid Panel</td><td>Thyroid hormone analysis for thyroid health.</td></tr>
+        <tr><td>Blood Glucose & HbA1c</td><td>Diabetes monitoring and management.</td></tr>
+        <tr><td>Lipid Profile</td><td>Cholesterol and lipid levels check.</td></tr>
+        <tr><td>Liver & Kidney Tests</td><td>Assess organ functions and detect issues.</td></tr>
+        <tr><td>Vitamin D & B12</td><td>Detect deficiencies affecting immunity & energy.</td></tr>
+        <tr><td>Cancer Markers</td><td>Early detection markers for cancer.</td></tr>
+        <tr><td>Hormonal Tests</td><td>Reproductive & hormonal health assessment.</td></tr>
+        <tr><td>COVID-19 RT-PCR</td><td>Detection of active COVID infection.</td></tr>
+        <tr><td>Microbiology Tests</td><td>Identify infectious agents and pathogens.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Health Packages & Pricing -->
+  <section id="packages">
+    <h2>Affordable Health Checkup Packages in Ner Chowk</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Package / Test</th>
+          <th>Price (INR)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Basic Wellness</td><td>Rs. 499</td></tr>
+        <tr><td>Complete Body Checkup</td><td>Rs. 2499</td></tr>
+        <tr><td>Thyroid & Vitamin Panel</td><td>Rs. 1099</td></tr>
+        <tr><td>Women's Health Package</td><td>Rs. 1599</td></tr>
+        <tr><td>Senior Citizens Package</td><td>Rs. 1899</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Infrastructure & Team -->
+  <section>
+    <h2>Advanced Lab Infrastructure & Expert Team in Ner Chowk</h2>
+    <ul>
+      <li>Latest Automated Analyzers for Accurate Results</li>
+      <li>Hygienic & Sanitized Testing Environment</li>
+      <li>Qualified Pathologists & Technicians</li>
+      <li>Efficient Sample Processing & Reporting</li>
+      <li>AI-Driven Quality Control</li>
+    </ul>
+    <p>Trust our skilled team and modern facilities for reliable reports, timely service, and confidentiality.</p>
+  </section>
+
+  <!-- Home Sample Collection -->
+  <section>
+    <h2>Home Sample Collection in Ner Chowk</h2>
+    <p>Book your blood tests from home. Our professional team will visit your location, collect samples safely, and deliver reports within 24 hours.</p>
+    <h3>How to Book?</h3>
+    <ol>
+      <li>Book online or via call</li>
+      <li>Select your preferred date & time</li>
+      <li>Our team visits your home</li>
+      <li>Samples collected & processed</li>
+      <li>Reports delivered digitally within 24 hours</li>
+    </ol>
+  </section>
+</div>
+
+<!-- Pricing Details -->
+<div class="container" id="prices" style="margin-top:50px;">
+  <h2>Competitive Blood Test Rates in Ner Chowk</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Test Name</th>
+        <th>Cost (INR)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>CBC</td><td>Rs. 599</td></tr>
+      <tr><td>Lipid Profile</td><td>Rs. 1399</td></tr>
+      <tr><td>Blood Glucose & HbA1c</td><td>Rs. 799</td></tr>
+      <tr><td>Thyroid Panel</td><td>Rs. 1099</td></tr>
+      <tr><td>Liver & Kidney Tests</td><td>Rs. 1199</td></tr>
+      <tr><td>Vitamin D & B12</td><td>Rs. 999</td></tr>
+      <tr><td>Cancer Markers</td><td>Rs. 1799</td></tr>
+      <tr><td>COVID-19 RT-PCR</td><td>Rs. 2200</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Gallery -->
+<h3 style="text-align:center; margin-top:50px;">📸 Inside Skystrem Labs Ner Chowk</h3>
+<div class="gallery" id="gallery">
+  <img src="img/Ner Chowk1.jpg" alt="Modern lab equipment" />
+  <img src="img/Ner Chowk2.jpg" alt="Sample collection" />
+  <img src="img/Ner Chowk3.jpg" alt="Diagnostic machines" />
+  <img src="img/Ner Chowk4.jpg" alt="Lab interior" />
+  <img src="img/Ner Chowk5.webp" alt="Our team" />
+</div>
+
+<!-- Contact & Booking -->
+<div class="contact-section" id="contact" style="margin-top:50px;">
+  <h2>Book Your Tests in Ner Chowk Today</h2>
+  <p><strong>Phone:</strong> 9646782839 (Available 24/7)</p>
+  <p><strong>WhatsApp:</strong> <a href="https://wa.me/919646782839" style="color:#25D366; text-decoration:underline;">Chat on WhatsApp</a></p>
+  <p><strong>Address:</strong> Near Ner Chowk Market, Himachal Pradesh</p>
+  <p><strong>Hours:</strong> 6:30 AM – 9:00 PM</p>
+  <p><strong>Email:</strong> <a href="mailto:nerchowk@skystremlabs.com" style="color:#ff9999;">nerchowk@skystremlabs.com</a></p>
+  <div>
+    <a class="btn btn-primary" href="tel:9646782839">📲 Book Home Service</a>
+    <a class="btn btn-whatsapp" href="https://wa.me/919646782839" target="_blank">💬 Chat on WhatsApp</a>
+  </div>
+</div>
+
+<!-- Floating Call Button -->
+<div class="float-call" title="Call Now" onclick="window.location.href='tel:9646782839'">📞</div>
+
+<!-- Footer -->
+<footer>
+  <p>
+    <a href="#about">About Us</a> | 
+    <a href="#services">Services</a> | 
+    <a href="#packages">Packages</a> | 
+    <a href="#tests">Tests</a> | 
+    <a href="#gallery">Gallery</a> | 
+    <a href="#contact">Contact</a>
+  </p>
+  <p>© 2025 Skystrem Labs, Ner Chowk. All rights reserved.</p>
+</footer>
+
+<!-- Lightbox Script -->
+<script>
+  const galleryImgs = document.querySelectorAll('.gallery img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('img');
+
+  galleryImgs.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+    });
+  });
+  lightbox.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+</script>
+</body>
+</html>

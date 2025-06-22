@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>भिलवाड़ा Rakta Parikṣā Seva - Skystrem Agency</title>
+  <style>
+    /* सब स्टाइल्स वही रहेंगे, बस टेक्स्ट बदलेंगे */
+    #bg-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -2;
+      object-fit: cover;
+    }
+    .video-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(15, 2, 19, 0.75);
+      z-index: -1;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #fff;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #d50000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      margin-bottom: 10px;
+      font-size: 2.2rem;
+    }
+    nav {
+      background-color: #b30000;
+      text-align: center;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      text-decoration: underline;
+      color: #ffcccb;
+    }
+    .content {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.85);
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      border-radius: 10px;
+    }
+    h2, h3, h4 {
+      color: #ff4d4d;
+      margin: 20px 0 15px;
+    }
+    h2 {
+      font-size: 1.8rem;
+      border-bottom: 2px solid #ff4d4d;
+      padding-bottom: 8px;
+    }
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 30px;
+    }
+    h4 {
+      font-size: 1.3rem;
+      margin-top: 25px;
+    }
+    p {
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    /* Images */
+    .hero-img, .gallery-img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .gallery-img:hover {
+      transform: scale(1.02);
+    }
+    /* Gallery Grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+    /* Lists */
+    ul, ol {
+      margin: 15px 0 20px 25px;
+    }
+    li {
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+    /* Buttons */
+    .btn-container {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .call-btn, .whatsapp-btn {
+      color: white;
+      padding: 12px 25px;
+      margin: 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
+    .call-btn {
+      background-color: #ff5252;
+    }
+    .whatsapp-btn {
+      background-color: #25D366;
+    }
+    .call-btn:hover {
+      background-color: #e53935;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(229, 57, 53, 0.4);
+    }
+    .whatsapp-btn:hover {
+      background-color: #128C7E;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(18, 140, 126, 0.4);
+    }
+    /* Footer Styles */
+    footer {
+      background-color: #d50000;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+    }
+    footer p {
+      margin-bottom: 10px;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: all 0.3s ease;
+    }
+    footer a:hover {
+      text-decoration: underline;
+      color: #ffcccb;
+    }
+    /* Floating Call Button */
+    .floating-call-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      background-color: #ff5252;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 999;
+      animation: pulse 1.5s infinite;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .floating-call-btn:hover {
+      background-color: #e53935;
+      transform: scale(1.1);
+    }
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 15px rgba(255, 82, 82, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop id="bg-video">
+    <source src="img/b1.webm" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
+  <div class="video-overlay"></div>
+
+  <header>
+    <h1>भिलवाड़ा शाखा</h1>
+    <p>Skystrem Rakta Parikṣā Seva - Vishvaśaṅkā. Teja. Satyā</p>
+    <p style="font-size:1rem; margin-top:10px;">Bhilwara tathā aspaśṭa sthāno meṁ Vishvasīya parīkṣā sevā 10 varṣa se adhik samaya se</p>
+  </header>
+  <nav>
+    <a href="#home">Gṛha</a>
+    <a href="#tests">Parīkṣā</a>
+    <a href="#prices">Mulya</a>
+    <a href="#gallery">Chitra Mandal</a>
+    <a href="#testimonials">Prashansā</a>
+    <a href="#faq">Prashnottar</a>
+    <a href="#contact">Sampark</a>
+  </nav>
+
+  <!-- Lightbox Modal for Images -->
+  <div id="lightboxOverlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); align-items:center; justify-content:center; z-index:1000;">
+    <img id="lightboxImg" src="" alt="Lab Image" style="max-width:90%; max-height:90%; border-radius:8px; box-shadow:0 0 20px rgba(0,0,0,0.5);"/>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content" id="home">
+    <img class="hero-img" src="img/b1.jpeg" alt="Bhilwara Clinic" />
+
+    <h2>Skystrem Rakta Parikṣā Seva - Bhilwara meṁ Vishvasīya Rakt Parīkṣā tathā Parīkṣā</h2>
+    <p>
+      Ham Bhilwara tathā aspasta sthāno meṁ uttam darje ke rakta parīkṣā tathā swasthya jānch seva pradan karte hain. Hamare advanced lab, kushal karmchari, aur mitrata poorn sevā tezi se satya aur sahi parinaam dete hain.
+    </p>
+    <h2>Bhīlvaṛā meṁ hamāre chune hue karṇīye kyā hain?</h2>
+    <ul>
+      <li><strong>Pramāṇik tathā Sahi Parinaam:</strong> NABL pramāṇit lab, kathin manako ke anusar.</li>
+      <li><strong>Adhunik Upkaran:</strong> Naye takneek ke sātha satik diagnosis.</li>
+      <li><strong>Visheshagya Dal:</strong> Anubhavi doctor, technician, aur swasthya karmchari.</li>
+      <li><strong>Vistara Parīkṣā:</strong> 200 se adhik parīkṣā, samanya se vishesh aur adhunik.</li>
+      <li><strong>Ghar se Sampala Sankalan:</strong> Aaramdayak aur surakshit sample uthāne ki seva.</li>
+      <li><strong>Saste Daam & Bima Sahayata:</strong> Pratispardha mulya aur bima ke anukul seva.</li>
+    </ul>
+    <h2>Hamare Rakt Parikṣā aur Jānch Packages Bhilwara meṁ</h2>
+    <p>Vishesh packages shamil hain:</p>
+    <ul>
+      <li>Mūl Swasthya Jānch</li>
+      <li>Swasthya Suraksha</li>
+      <li>Varishth Nagarik Packages</li>
+      <li>Mahilā aur Balak ke Packages</li>
+      <li>Vishesh Rog Parīkṣā</li>
+      <li>Adhunik Diagnostics</li>
+    </ul>
+    <h2>Hamare Top Rakt Parīkṣā</h2>
+    <h3>Samanya Parīkṣā</h3>
+    <ul>
+      <li>Pūrṇa Rakt Gana (CBC)</li>
+      <li>Lipid Profile</li>
+      <li>Blood Glucose & HbA1c</li>
+      <li>Jigar aur Kidney Function Tests</li>
+      <li>Thyroid Panel</li>
+    </ul>
+    <h3>Infection & Rog Parīkṣā</h3>
+    <ul>
+      <li>COVID-19 RT-PCR aur Antibody</li>
+      <li>Hepatitis B & C</li>
+      <li>HIV & STD Parīkṣā</li>
+      <li>Malaria aur Dengu</li>
+      <li>Tuberculosis Parīkṣā</li>
+    </ul>
+    <h3>Mahilā & Balak</h3>
+    <ul>
+      <li>Pregnancy Parīkṣā</li>
+      <li>Hormonal & Fertility Tests</li>
+      <li>Nawjāt aur Balak ke Parīkṣā</li>
+    </ul>
+    <h3>Adhunik Diagnostics</h3>
+    <ul>
+      <li>Cancer Markers</li>
+      <li>Cardiac Markers</li>
+      <li>Genetic Testing</li>
+      <li>Heavy Metal Tests</li>
+    </ul>
+    <div class="health-tip">
+      <strong>Swasthya Tip:</strong> Niyamit parīkṣā Bhilwara meṁ bimāriyon ko early meṁ pehchāne meṁ madad kartī hai, jo jīvan bachā sakti hai.
+    </div>
+  </div>
+
+  <!-- Price List -->
+  <div class="content" id="prices">
+    <h3>💰 Bhilwara meṁ Mulya Suchi</h3>
+    <table style="width:100%; border-collapse: collapse; margin-top:20px; background-color: rgba(255,255,255,0.1); border-radius:8px;">
+      <thead>
+        <tr>
+          <th style="border: 1px solid #ff4d4d; padding:10px;">Parīkṣā Nāma</th>
+          <th style="border: 1px solid #ff4d4d; padding:10px;">Mulya (INR)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">CBC</td>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">200</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">Lipid Profile</td>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">600</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">Blood Glucose & HbA1c</td>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">250</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">COVID-19 RT-PCR</td>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">1500</td>
+        </tr>
+        <!-- Aur bhi parīkṣā yahan jod sakte hain -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Gallery -->
+  <h3 style="margin:40px 0 20px 15px;">📸 Bhilwara Lab Chitra Mandal</h3>
+  <div class="gallery" id="gallery">
+    <img class="gallery-img" src="img/b2.jpg" alt="Laboratory Equipment" />
+    <img class="gallery-img" src="img/b3.jpg" alt="Testing Process" />
+    <img class="gallery-img" src="img/b4.jpeg" alt="Sample Collection" />
+    <img class="gallery-img" src="img/b5.jpg" alt="Lab Interior" />
+  </div>
+
+  <!-- Contact -->
+  <h3 id="contact" style="margin-top:40px;">📞 Bhilwara Kendra se Sampark</h3>
+  <p><strong>Phone:</strong> 9646782839 (24/7 Madad)</p>
+  <p><strong>WhatsApp:</strong> <a href="https://wa.me/919646782839" style="color:#25D366; text-decoration: underline;">Chat karen</a></p>
+  <p><strong>Sthān:</strong> City Mall ke pass, Bhilwara, Rajasthan - 311001</p>
+  <p><strong>Samay:</strong> 7:00 subah se 7:00 shaam (Ghar se sampala 7 din)</p>
+  <p><strong>Email:</strong> <a href="mailto:support@skystrembloodtest.com" style="color:#ff9999;">support@skystrembloodtest.com</a></p>
+  <p><strong>Aapāttkāl sevā:</strong> Zaroori halat ke liye uplabdh (call karen vyavastha ke liye)</p>
+
+  <div class="btn-container">
+    <a class="call-btn" href="tel:+919646782839">📲 Ghar se Sampala Book Karen</a>
+    <a class="whatsapp-btn" href="https://wa.me/919646782839" target="_blank">💬 Abhi WhatsApp Karen</a>
+  </div>
+
+  <div class="health-tip">
+    <strong>Kya Aap Jante Hain?</strong> Bahut saare bima pradan karnewale ab diagnostic tests ko cover karte hain. Hum sabhi major insurance card ko samarthan dete hain.
+  </div>
+
+  <!-- Floating Call Button -->
+  <a href="tel:+919646782839" class="floating-call-btn" title="Abhi Call Karen">📞</a>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      <a href="#home">Gṛha</a> | 
+      <a href="#bhilwara">Bhilwara</a> | 
+      <a href="#privacy">Gopaneeti Niti</a> | 
+      <a href="#terms">Seva Sharto</a>
+    </p>
+    <p>© 2025 Skystrem Rakta Parikṣā Seva. Sarvadhik Adhikar.</p>
+    <p>NABL Pramāṇit | ISO 9001:2015 Pramāṇit | Rajasthan Swasthya Vibhag ke dwara mânayata prapt</p>
+  </footer>
+
+  <!-- Script for Lightbox -->
+  <script>
+    const galleryImages = document.querySelectorAll('.gallery-img');
+    const lightboxOverlay = document.getElementById('lightboxOverlay');
+    const lightboxImg = document.getElementById('lightboxImg');
+
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxOverlay.style.display = 'flex';
+      });
+    });
+
+    lightboxOverlay.addEventListener('click', () => {
+      lightboxOverlay.style.display = 'none';
+    });
+  </script>
+</body>
+</html>

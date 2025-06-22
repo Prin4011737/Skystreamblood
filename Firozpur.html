@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <title>Firozpur Blood Test Services - Skystrem Agency</title>
+  
+  <!-- Meta Description & Keywords for SEO -->
+  <meta name="description" content="Skystrem Blood Test Agency in Firozpur offers reliable, affordable, and accurate blood testing services including health checkups, diagnostic packages, and home sample collection." />
+  <meta name="keywords" content="Blood Test Firozpur, Diagnostic Services, Health Checkup, Blood Tests, Lab Testing, Firozpur Labs, Diagnostic Center Firozpur, Affordable Blood Tests, NABL Accredited Labs" />
+  <meta name="author" content="Skystrem Agency" />
+
+  <!-- Open Graph Meta Tags for Social Sharing -->
+  <meta property="og:title" content="Firozpur Blood Test Services - Skystrem Agency" />
+  <meta property="og:description" content="Reliable blood testing, health checkups, and diagnostic services in Firozpur. Trusted for accuracy and affordability." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourwebsite.com" /> <!-- Replace with your actual URL -->
+  <meta property="og:image" content="https://yourwebsite.com/img/og-image.jpg" /> <!-- Replace with your image URL -->
+  <meta property="og:site_name" content="Skystrem Blood Test Agency" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Firozpur Blood Test Services - Skystrem Agency" />
+  <meta name="twitter:description" content="Reliable and affordable blood testing services in Firozpur. Book home sample collection and get quick results." />
+  <meta name="twitter:image" content="https://yourwebsite.com/img/twitter-card.jpg" /> <!-- Replace with your image -->
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+
+  <!-- Your existing styles -->
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #fff;
+      background-color: #f4f4f4;
+    }
+
+    /* Video background */
+    #bg-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -2;
+      object-fit: cover;
+    }
+
+    /* Overlay for darkening background */
+    .video-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(15, 2, 19, 0.75);
+      z-index: -1;
+    }
+
+    /* Header styles */
+    header {
+      background-color: #d50000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      margin-bottom: 10px;
+      font-size: 2.2rem;
+    }
+    header p {
+      margin-top: 10px;
+    }
+
+    /* Navigation styles */
+    nav {
+      background-color: #b30000;
+      text-align: center;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      text-decoration: underline;
+      color: #ffcccb;
+    }
+
+    /* Content container */
+    .content {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.85);
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      border-radius: 10px;
+    }
+
+    /* Headings */
+    h2 {
+      font-size: 1.8rem;
+      border-bottom: 2px solid #ff4d4d;
+      padding-bottom: 8px;
+      margin-top: 20px;
+      color: #ff4d4d;
+    }
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 30px;
+      color: #ff4d4d;
+    }
+    h4 {
+      font-size: 1.3rem;
+      margin-top: 25px;
+    }
+
+    /* Paragraphs */
+    p {
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+
+    /* Hero Image */
+    .hero-img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .hero-img:hover {
+      transform: scale(1.02);
+    }
+
+    /* Gallery grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+    .gallery-img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .gallery-img:hover {
+      transform: scale(1.02);
+    }
+
+    /* Lists */
+    ul, ol {
+      margin: 15px 0 20px 25px;
+    }
+    li {
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+
+    /* Buttons container */
+    .btn-container {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .call-btn, .whatsapp-btn {
+      color: white;
+      padding: 12px 25px;
+      margin: 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
+    .call-btn {
+      background-color: #ff5252;
+    }
+    .call-btn:hover {
+      background-color: #e53935;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(229, 57, 53, 0.4);
+    }
+    .whatsapp-btn {
+      background-color: #25D366;
+    }
+    .whatsapp-btn:hover {
+      background-color: #128C7E;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(18, 140, 126, 0.4);
+    }
+
+    /* Testimonials and FAQ styles omitted for brevity */
+
+    /* Footer styles */
+    footer {
+      background-color: #d50000;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+    }
+    footer p {
+      margin-bottom: 10px;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: all 0.3s ease;
+    }
+    footer a:hover {
+      text-decoration: underline;
+      color: #ffcccb;
+    }
+
+    /* Floating Call Button */
+    .floating-call-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      background-color: #ff5252;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 999;
+      animation: pulse 1.5s infinite;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .floating-call-btn:hover {
+      background-color: #e53935;
+      transform: scale(1.1);
+    }
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 15px rgba(255, 82, 82, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Video Background -->
+  <video autoplay muted loop id="bg-video">
+    <source src="img/feroz.mp4" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
+  <div class="video-overlay"></div>
+
+  <!-- Header -->
+  <header>
+    <h1>Firozpur Branch</h1>
+    <p>Skystrem Blood Test Agency - Trusted. Fast. Accurate.</p>
+    <p style="font-size:1rem; margin-top:10px;">Providing Reliable Diagnostic Services in Firozpur and Surrounding Areas for Over a Decade</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#tests">Tests</a>
+    <a href="#prices">Prices</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="content" id="home">
+    <img class="hero-img" src="img/f1.jpg" alt="Firozpur Blood Test Clinic" />
+
+    <h2>Welcome to Skystrem Blood Test Agency - Your Trusted Partner for the Best Blood Tests & Checkups in Firozpur</h2>
+    <p>
+      At Skystrem Blood Test Agency, we take pride in delivering <strong>top-quality blood testing and comprehensive health checkup services</strong> to the residents of Firozpur and its surrounding areas. Our mission is to help you maintain optimal health by providing <strong>accurate diagnostics</strong>, <strong>quick report turnaround times</strong>, and <strong>personalized care</strong> tailored to your unique health needs.
+    </p>
+    <p>
+      In today’s fast-paced lifestyle, regular health monitoring is essential to detect and prevent potential health issues before they escalate. We understand how valuable your time is, which is why our state-of-the-art laboratories utilize <strong>cutting-edge technology</strong> and automated analyzers to ensure reliable and swift test results.
+    </p>
+    <p>
+      Our team of certified and experienced professionals is committed to maintaining the highest standards of quality and safety. Whether you need routine blood tests, specialized screenings, or full-body health checkups, Skystrem is your <strong>go-to healthcare partner</strong> in Firozpur.
+    </p>
+    <p>
+      With our <strong>affordable pricing</strong>, <strong>transparent billing</strong>, and <strong>friendly customer service</strong>, we make healthcare accessible and hassle-free. Experience the convenience of <strong>home sample collection</strong> and fast online report delivery with Skystrem Blood Test Agency — where your health is our priority.
+    </p>
+    <p>
+    In the busy lifestyle of Firozpur, timely health checks can make a big difference. Our advanced labs, experienced staff, and friendly service ensure you get trustworthy results at affordable prices.
+    </p>
+    <h2>Why Choose Skystrem in Firozpur?</h2>
+    <ul>
+      <li><strong>Accurate & Reliable Results:</strong> NABL accredited labs following strict standards.</li>
+      <li><strong>Latest Technology:</strong> State-of-the-art equipment for precise diagnostics.</li>
+      <li><strong>Experienced Team:</strong> Qualified pathologists and healthcare professionals.</li>
+      <li><strong>Wide Range of Tests:</strong> Over 200 tests covering all health needs.</li>
+      <li><strong>Convenient & Accessible:</strong> Located in Firozpur with home collection services.</li>
+      <li><strong>Affordable & Insurance Friendly:</strong> Competitive pricing and support for insurance claims.</li>
+    </ul>
+    <h2>The Importance of Regular Blood Tests in Firozpur</h2>
+    <p>
+    Regular blood tests help detect health issues early, especially important in areas like Firozpur where early intervention can prevent complications. Routine checkups can identify health risks such as diabetes, cholesterol, thyroid issues, and infections.
+    </p>
+    <p>
+    Whether you are a senior citizen, a working professional, or a new parent, regular testing ensures you maintain good health and peace of mind.
+    </p>
+    <h2>Our Blood Test & Checkup Packages in Firozpur</h2>
+    <p>Customized packages based on age, gender, and health concerns include:</p>
+    <ul>
+      <li>Basic Health Checkup</li>
+      <li>Wellness Screening</li>
+      <li>Senior Citizen Packages</li>
+      <li>Women’s & Children’s Packages</li>
+      <li>Disease Specific Tests</li>
+      <li>Advanced Diagnostics</li>
+    </ul>
+    <h2>Top Blood Tests We Offer</h2>
+    <h3>Routine Tests</h3>
+    <ul>
+      <li>Complete Blood Count (CBC)</li>
+      <li>Lipid Profile</li>
+      <li>Blood Glucose & HbA1c</li>
+      <li>Liver & Kidney Function Tests</li>
+      <li>Thyroid Panel</li>
+    </ul>
+    <h3>Infection & Disease Tests</h3>
+    <ul>
+      <li>COVID-19 RT-PCR & Antibody</li>
+      <li>Hepatitis B & C</li>
+      <li>HIV & STD Tests</li>
+      <li>Malaria & Dengue</li>
+      <li>Tuberculosis Test</li>
+    </ul>
+    <h3>Women & Children</h3>
+    <ul>
+      <li>Pregnancy Tests</li>
+      <li>Hormonal & Fertility Tests</li>
+      <li>Neonatal & Pediatric Tests</li>
+    </ul>
+    <h3>Advanced Diagnostics</h3>
+    <ul>
+      <li>Cancer Markers</li>
+      <li>Cardiac Markers</li>
+      <li>Genetic Testing</li>
+      <li>Heavy Metal Tests</li>
+    </ul>
+    <div class="health-tip">
+      <strong>Health Tip:</strong> Early detection saves lives. Regular checkups in Firozpur are recommended for ongoing health.
+    </div>
+  </div>
+
+  <!-- Price List -->
+  <div class="content" id="prices">
+    <h3>💰 Price List in Firozpur</h3>
+    <table style="width:100%; border-collapse: collapse; margin-top:20px; background-color: rgba(255,255,255,0.1); border-radius:8px;">
+      <thead>
+        <tr>
+          <th style="border: 1px solid #ff4d4d; padding:10px;">Test Name</th>
+          <th style="border: 1px solid #ff4d4d; padding:10px;">Price (INR)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">CBC</td>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">200</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">LFT</td>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">500</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">KFT</td>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">400</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">Lipid Profile</td>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">600</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">COVID-19 RT-PCR</td>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">1500</td>
+        </tr>
+        <!-- Add more as needed -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Gallery -->
+  <h3 style="margin:40px 0 20px 15px;">📸 Firozpur Lab Gallery</h3>
+  <div class="gallery" id="gallery">
+    <img class="gallery-img" src="img/f1.jpg" alt="Lab Equipment" /> 
+    <img class="gallery-img" src="img/f2.jpeg" alt="Testing Process" />
+    <img class="gallery-img" src="img/f3.jpeg" alt="Sample Collection" />
+    <img class="gallery-img" src="img/f5.jpeg" alt="Laboratory Interior" />
+  </div>
+
+  <!-- Contact Details -->
+  <h3 id="contact" style="margin-top:40px;">📞 Contact Our Firozpur Center</h3>
+  <p><strong>Phone:</strong> 9646782839 (24/7 Helpline)</p>
+  <p><strong>WhatsApp:</strong> <a href="https://wa.me/919646782839" style="color:#25D366; text-decoration: underline;">Click to Chat</a></p>
+  <p><strong>Location:</strong> Near Civil Hospital, Main Bazaar Road, Firozpur, Punjab - 152123</p>
+  <p><strong>Timings:</strong> 7:00 AM to 7:00 PM (Home collection available 7 days a week)</p>
+  <p><strong>Email:</strong> <a href="mailto:support@skystrembloodtest.com" style="color:#ff9999;">support@skystrembloodtest.com</a></p>
+  <p><strong>Emergency Services:</strong> Available for critical cases (call for arrangements)</p>
+
+  <!-- Call to Action Buttons -->
+  <div class="btn-container">
+    <a class="call-btn" href="tel:+919646782839">📲 Book a Home Collection</a>
+    <a class="whatsapp-btn" href="https://wa.me/919646782839" target="_blank">💬 WhatsApp Us Now</a>
+  </div>
+
+  <!-- Health Tip -->
+  <div class="health-tip">
+    <strong>Did You Know?</strong> Many insurance providers now cover diagnostic tests. We accept all major health insurance cards and can assist with claim documentation.
+  </div>
+
+  <!-- Floating Call Button -->
+  <a href="tel:+919646782839" class="floating-call-btn" title="Call Now">📞</a>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      <a href="#home">Home</a> | 
+      <a href="#firozpur">Firozpur</a> | 
+      <a href="#privacy">Privacy Policy</a> | 
+      <a href="#terms">Terms of Service</a>
+    </p>
+    <p>© 2025 Skystrem Blood Test Agency. All rights reserved.</p>
+    <p>NABL Accredited | ISO 9001:2015 Certified | Recognized by Punjab Health Department</p>
+  </footer>
+
+  <!-- Lightbox Script for Gallery -->
+  <script>
+    const galleryImages = document.querySelectorAll('.gallery-img');
+    const lightboxOverlay = document.createElement('div');
+    lightboxOverlay.id = 'lightboxOverlay';
+    lightboxOverlay.style.position = 'fixed';
+    lightboxOverlay.style.top = 0;
+    lightboxOverlay.style.left = 0;
+    lightboxOverlay.style.width = '100%';
+    lightboxOverlay.style.height = '100%';
+    lightboxOverlay.style.backgroundColor = 'rgba(0,0,0,0.8)';
+    lightboxOverlay.style.display = 'none';
+    lightboxOverlay.style.alignItems = 'center';
+    lightboxOverlay.style.justifyContent = 'center';
+    lightboxOverlay.style.zIndex = 1000;
+    document.body.appendChild(lightboxOverlay);
+
+    const lightboxImg = document.createElement('img');
+    lightboxImg.style.maxWidth = '90%';
+    lightboxImg.style.maxHeight = '90%';
+    lightboxImg.style.borderRadius = '10px';
+    lightboxOverlay.appendChild(lightboxImg);
+
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxOverlay.style.display = 'flex';
+      });
+    });
+    lightboxOverlay.addEventListener('click', () => {
+      lightboxOverlay.style.display = 'none';
+    });
+  </script>
+</body>
+</html>

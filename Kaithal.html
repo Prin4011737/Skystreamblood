@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kaithal Blood Test & Diagnostics - SkyStream</title>
+  <style>
+    /* Reset & Base Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #fff;
+      background: #0f0f0f;
+    }
+
+    /* Background Video & Overlay */
+    #bg-video {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: -1;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #ff6f00, #ff8f00);
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #e65100;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 8px 12px;
+      border-radius: 5px;
+      transition: background 0.3s, transform 0.2s;
+    }
+    nav a:hover {
+      background-color: #ffab40;
+      transform: translateY(-2px);
+    }
+
+    /* Main Content */
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Section Titles */
+    h2 {
+      font-size: 2rem;
+      color: #ffd700;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ffd700;
+      padding-bottom: 8px;
+    }
+
+    /* Content Paragraphs */
+    p {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+
+    /* Features & List Styles */
+    ul {
+      margin-left: 25px;
+      margin-bottom: 20px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* Service Packages */
+    .packages {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .package-card {
+      flex: 1 1 calc(50% - 20px);
+      background: rgba(255,255,255,0.1);
+      padding: 15px;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .package-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+    .package-card h3 {
+      margin-bottom: 10px;
+      color: #ff6f00;
+    }
+
+    /* Price Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ffd700;
+      text-align: center;
+    }
+    th {
+      background-color: #ff6f00;
+      color: #fff;
+    }
+    tbody tr:nth-child(even) {
+      background-color: rgba(255,255,255,0.05);
+    }
+
+    /* Gallery Styles */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    /* Contact & CTA Buttons */
+    .contact-section {
+      margin-top: 40px;
+      text-align: center;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.2s;
+      text-decoration: none;
+    }
+    .btn-primary {
+      background-color: #e91e63;
+      color: #fff;
+    }
+    .btn-primary:hover {
+      background-color: #ad1457;
+      transform: translateY(-2px);
+    }
+    .btn-whatsapp {
+      background-color: #25D366;
+      color: #fff;
+    }
+    .btn-whatsapp:hover {
+      background-color: #128C7E;
+      transform: translateY(-2px);
+    }
+
+    /* Floating Call Button */
+    .float-call {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      width: 60px;
+      height: 60px;
+      background-color: #e91e63;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      z-index: 999;
+    }
+    .float-call:hover {
+      background-color: #ad1457;
+      transform: scale(1.1);
+    }
+
+    /* Footer */
+    footer {
+      background: #212121;
+      padding: 30px 20px;
+      margin-top: 50px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    footer p {
+      margin: 8px 0;
+    }
+    footer a {
+      color: #ffd700;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Lightbox for images */
+    #lightbox {
+      display: none;
+      position: fixed;
+      top:0; left:0;
+      width:100%; height:100%;
+      background: rgba(0,0,0,0.8);
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    #lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video id="bg-video" autoplay muted loop>
+    <source src="img/Kaithal v.mp4" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
+  <div class="overlay"></div>
+
+  <!-- Header -->
+  <header>
+    <h1>Kaithal Diagnostic Center</h1>
+    <p>SkyStream Blood Tests & Health Screening - Precision & Trust</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#pricing">Prices</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Lightbox for Images -->
+  <div id="lightbox">
+    <img src="" alt="Enlarged Image" />
+  </div>
+
+  <!-- Main Content -->
+  <div class="container" id="home">
+    <section>
+      <img src="img/Kaithal1.jpg" alt="Kaithal Lab" style="width:100%; border-radius:15px; margin-bottom:20px; box-shadow:0 4px 15px rgba(0,0,0,0.3);"/>
+    </section>
+
+    <section>
+      <h2>Trusted Blood Tests & Health Checks in Kaithal</h2>
+      <p>At Kaithal Diagnostics, we combine advanced technology, experienced staff, and a customer-first approach to deliver fast and accurate results. Your health is our priority.</p>
+    </section>
+
+    <section>
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li><strong>Certified Labs:</strong> NABL accredited for quality and accuracy.</li>
+        <li><strong>State-of-the-art Equipment:</strong> Ensuring precise diagnostics.</li>
+        <li><strong>Expert Team:</strong> Skilled doctors, technicians, and health consultants.</li>
+        <li><strong>Wide Range of Tests:</strong> Over 250+ tests including routine, advanced, and specialty.</li>
+        <li><strong>Home Sample Collection:</strong> Convenient, safe, and contactless.</li>
+        <li><strong>Affordable & Insurance:</strong> Competitive pricing, insurance support available.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Our Test Packages</h2>
+      <div class="packages">
+        <div class="package-card">
+          <h3>Basic Health Checkup</h3>
+          <ul>
+            <li>CBC</li>
+            <li>Blood Sugar Fasting</li>
+            <li>Blood Pressure</li>
+            <li>Urinalysis</li>
+          </ul>
+        </div>
+        <div class="package-card">
+          <h3>Senior Citizen Package</h3>
+          <ul>
+            <li>Lipid Profile</li>
+            <li>Kidney Function Test</li>
+            <li>Vitamin D</li>
+            <li>Bone Density Test</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Popular Tests</h2>
+      <h3>Routine Blood Tests</h3>
+      <ul>
+        <li>Complete Blood Count (CBC)</li>
+        <li>Lipid Profile</li>
+        <li>Blood Glucose & HbA1c</li>
+        <li>Liver & Kidney Tests</li>
+        <li>Thyroid Panel</li>
+      </ul>
+      <h3>Special Tests</h3>
+      <ul>
+        <li>COVID-19 RT-PCR & Antibody</li>
+        <li>Hepatitis B & C</li>
+        <li>HIV & STD Screening</li>
+        <li>Malaria & Dengue</li>
+        <li>Genetic Testing</li>
+      </ul>
+    </section>
+
+    <div class="health-tip" style="margin-top:20px; padding:15px; background:#ff9800; border-radius:10px; text-align:center;">
+      <strong>Tip:</strong> Regular health checkups can help detect issues early. Book your test today!
+    </div>
+  </div>
+
+  <!-- Prices Section -->
+  <div class="container" id="pricing" style="margin-top:50px;">
+    <h2>Test Prices in Kaithal</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Test Name</th>
+          <th>Price (INR)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>CBC</td>
+          <td>250</td>
+        </tr>
+        <tr>
+          <td>Lipid Profile</td>
+          <td>700</td>
+        </tr>
+        <tr>
+          <td>Blood Glucose & HbA1c</td>
+          <td>300</td>
+        </tr>
+        <tr>
+          <td>COVID-19 RT-PCR</td>
+          <td>2000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Gallery -->
+  <h3 style="text-align:center; margin-top:50px;">📸 Kaithal Lab Gallery</h3>
+  <div class="gallery" id="gallery">
+    <img src="img/Kaithal2.jpg" alt="Laboratory Equipment" />
+    <img src="img/Kaithal3.jpg" alt="Sample Collection" />
+    <img src="img/Kaithal4.jpg" alt="Testing Process" />
+    <img src="img/Kaithal5.jpg" alt="Lab Interior" />
+  </div>
+
+  <!-- Contact & CTA Buttons -->
+  <div class="contact-section" id="contact">
+    <h2>Contact Kaithal Diagnostics</h2>
+    <p><strong>Phone:</strong> 9646782839 (24/7 Helpline)</p>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/919646782839" style="color:#25D366; text-decoration:underline;">Click to Chat</a></p>
+    <p><strong>Address:</strong> Near Kaithal Bus Stand, Haryana</p>
+    <p><strong>Working Hours:</strong> 6:00 AM - 8:00 PM (Home Sample Pickup Available)</p>
+    <p><strong>Email:</strong> <a href="mailto:kaithal@skystream.com" style="color:#ff9999;">kaithal@skystream.com</a></p>
+
+    <div>
+      <a class="btn btn-primary" href="tel:+919646782839">📲 Book Home Collection</a>
+      <a class="btn btn-whatsapp" href="https://wa.me/919646782839" target="_blank">💬 WhatsApp Us</a>
+    </div>
+  </div>
+
+  <!-- Floating Call Button -->
+  <div class="float-call" title="Call Now" onclick="window.location.href='tel:+919646782839'">📞</div>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      <a href="#home">Home</a> | 
+      <a href="#services">Services</a> | 
+      <a href="#pricing">Prices</a> | 
+      <a href="#gallery">Gallery</a> | 
+      <a href="#contact">Contact</a>
+    </p>
+    <p>&copy; 2025 SkyStream Diagnostics. All rights reserved.</p>
+    <p>NABL Certified | ISO 9001:2015 | Haryana Health Department Approved</p>
+  </footer>
+
+  <!-- Scripts for Lightbox -->
+  <script>
+    const galleryImages = document.querySelectorAll('.gallery img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+  </script>
+</body>
+</html>

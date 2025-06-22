@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <!-- Meta Tags for SEO & Ranking -->
+  <title>Hoshiarpur Blood Test Services - Skystrem Agency</title>
+  <meta name="description" content="Skystrem Blood Test Agency in Hoshiarpur offers accurate, fast, and reliable diagnostic services including blood tests, health checkups, and lab packages. Certified NABL labs, home sample collection, and affordable prices." />
+  <meta name="keywords" content="Hoshiarpur blood test, blood test Hoshiarpur, diagnostic lab Hoshiarpur, health checkup Hoshiarpur, NABL accredited labs, blood testing, COVID testing, health packages Hoshiarpur" />
+  <meta name="author" content="Skystrem Blood Test Agency" />
+
+  <!-- Open Graph / Facebook Meta Tags -->
+  <meta property="og:title" content="Hoshiarpur Blood Test Services - Skystrem Agency" />
+  <meta property="og:description" content="Reliable blood testing and health checkup services in Hoshiarpur. Certified labs, home sample collection, and affordable pricing." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourwebsite.com" /> <!-- Replace with your actual URL -->
+  <meta property="og:image" content="img/your-og-image.jpg" /> <!-- Replace with a relevant image URL -->
+
+  <!-- Twitter Card Meta -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Hoshiarpur Blood Test Services - Skystrem Agency" />
+  <meta name="twitter:description" content="Reliable blood testing and health checkup services in Hoshiarpur. Certified labs, home sample collection, and affordable pricing." />
+  <meta name="twitter:image" content="img/your-twitter-image.jpg" /> <!-- Replace with your image -->
+
+  <!-- Favicon (Optional) -->
+  <link rel="icon" href="img/favicon.ico" />
+
+  <style>
+    /* Existing Styles with slight formatting improvements */
+    #bg-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -2;
+      object-fit: cover;
+    }
+    .video-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(15, 2, 19, 0.75);
+      z-index: -1;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #fff;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #d50000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      margin-bottom: 10px;
+      font-size: 2.2rem;
+    }
+    nav {
+      background-color: #b30000;
+      text-align: center;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      text-decoration: underline;
+      color: #ffcccb;
+    }
+    .content {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.85);
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      border-radius: 10px;
+    }
+    h2, h3, h4 {
+      color: #ff4d4d;
+      margin: 20px 0 15px;
+    }
+    h2 {
+      font-size: 1.8rem;
+      border-bottom: 2px solid #ff4d4d;
+      padding-bottom: 8px;
+    }
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 30px;
+    }
+    h4 {
+      font-size: 1.3rem;
+      margin-top: 25px;
+    }
+    p {
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    /* Images */
+    .hero-img, .gallery-img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .gallery-img:hover {
+      transform: scale(1.02);
+    }
+    /* Gallery Grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+    /* Lists */
+    ul, ol {
+      margin: 15px 0 20px 25px;
+    }
+    li {
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+    /* Buttons */
+    .btn-container {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .call-btn, .whatsapp-btn {
+      color: white;
+      padding: 12px 25px;
+      margin: 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
+    .call-btn {
+      background-color: #ff5252;
+    }
+    .whatsapp-btn {
+      background-color: #25D366;
+    }
+    .call-btn:hover {
+      background-color: #e53935;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(229, 57, 53, 0.4);
+    }
+    .whatsapp-btn:hover {
+      background-color: #128C7E;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(18, 140, 126, 0.4);
+    }
+    /* Footer Styles */
+    footer {
+      background-color: #d50000;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+    }
+    footer p {
+      margin-bottom: 10px;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: all 0.3s ease;
+    }
+    footer a:hover {
+      text-decoration: underline;
+      color: #ffcccb;
+    }
+    /* Floating Call Button */
+    .floating-call-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      background-color: #ff5252;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 999;
+      animation: pulse 1.5s infinite;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .floating-call-btn:hover {
+      background-color: #e53935;
+      transform: scale(1.1);
+    }
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 15px rgba(255, 82, 82, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Video -->
+  <video autoplay muted loop id="bg-video">
+    <source src="img/Hoshairpur.mp4" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
+  <div class="video-overlay"></div>
+
+  <!-- Header -->
+  <header>
+    <h1>Hoshiarpur Branch</h1>
+    <p>Skystrem Blood Test Agency - Trusted. Fast. Accurate.</p>
+    <p style="font-size:1rem; margin-top:10px;">Providing Reliable Diagnostic Services in Hoshiarpur and Surrounding Areas for Over a Decade</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#tests">Tests</a>
+    <a href="#prices">Prices</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="content" id="home">
+      <div style="display: flex; justify-content: center; margin-top: 20px;">
+      <img src="img/Hoshiarpur Banner.png" alt="Karsog Diagnostic Lab" 
+       style="max-width:100%; width: 700px; border-radius:7px; margin-bottom:10px; box-shadow:0 4px 15px rgba(0,0,0,0.3);" />
+    </div>
+
+
+    <h2>Welcome to Skystrem Blood Test Agency - Your Trusted Partner in Hoshiarpur</h2>
+    <p>
+      At Skystrem Blood Test Agency, we provide high-quality blood testing and health checkups in Hoshiarpur and nearby areas. Our focus is on delivering accurate results, fast service, and personalized care to help you stay healthy.
+    </p>                                                                                
+    <p>
+      Regular health checkups are vital in Hoshiarpur to prevent and detect health issues early. Our modern labs and professional staff ensure reliable diagnostics for your peace of mind.
+    </p>
+    <h2>Why Choose Skystrem in Hoshiarpur?</h2>
+    <ul>
+      <li><strong>Accurate & Certified Results:</strong> NABL accredited labs following strict protocols.</li>
+      <li><strong>Advanced Equipment:</strong> Latest technology for precise testing.</li>
+      <li><strong>Expert Team:</strong> Qualified doctors, technicians, and health professionals.</li>
+      <li><strong>Extensive Test Range:</strong> Over 200 tests including routine and specialized diagnostics.</li>
+      <li><strong>Convenience:</strong> Located centrally in Hoshiarpur with home sample collection.</li>
+      <li><strong>Affordable & Insurance Friendly:</strong> Competitive prices, insurance support, and discounts.</li>
+    </ul>
+    <h2>The Importance of Regular Testing in Hoshiarpur</h2>
+    <p>
+      Early detection through routine blood tests can prevent major health issues. In Hoshiarpur, where lifestyle factors impact health, regular checkups are essential for maintaining wellness.
+    </p>
+    <p>
+      Whether you're a working professional, senior citizen, or parent, regular testing keeps you ahead of potential health risks.
+    </p>
+    <h2>Our Blood Test & Checkup Packages in Hoshiarpur</h2>
+    <p>We offer customized packages for different needs:</p>
+    <ul>
+      <li>Basic Health Checkup</li>
+      <li>Wellness Screening</li>
+      <li>Senior Citizen Packages</li>
+      <li>Women’s & Children’s Packages</li>
+      <li>Disease Specific Tests</li>
+      <li>Advanced Diagnostics</li>
+    </ul>
+    <h2>Top Blood Tests We Offer</h2>
+    <h3>Routine Tests</h3>
+    <ul>
+      <li>Complete Blood Count (CBC)</li>
+      <li>Lipid Profile</li>
+      <li>Blood Glucose & HbA1c</li>
+      <li>Liver & Kidney Function Tests</li>
+      <li>Thyroid Panel</li>
+    </ul>
+    <h3>Infection & Disease Tests</h3>
+    <ul>
+      <li>COVID-19 RT-PCR & Antibody</li>
+      <li>Hepatitis B & C</li>
+      <li>HIV & STD Tests</li>
+      <li>Malaria & Dengue</li>
+      <li>Tuberculosis Test</li>
+    </ul>
+    <h3>Women & Children</h3>
+    <ul>
+      <li>Pregnancy Tests</li>
+      <li>Hormonal & Fertility Tests</li>
+      <li>Neonatal & Pediatric Tests</li>
+    </ul>
+    <h3>Advanced Diagnostics</h3>
+    <ul>
+      <li>Cancer Markers</li>
+      <li>Cardiac Markers</li>
+      <li>Genetic Testing</li>
+      <li>Heavy Metal Tests</li>
+    </ul>
+    <div class="health-tip">
+      <strong>Health Tip:</strong> Regular testing in Hoshiarpur helps you stay healthy and catch issues early.
+    </div>
+  </div>
+
+  <!-- Price List -->
+  <div class="content" id="prices">
+    <h3>💰 Price List in Hoshiarpur</h3>
+    <table style="width:100%; border-collapse: collapse; margin-top:20px; background-color: rgba(255,255,255,0.1); border-radius:8px;">
+      <thead>
+        <tr>
+          <th style="border: 1px solid #ff4d4d; padding:10px;">Test Name</th>
+          <th style="border: 1px solid #ff4d4d; padding:10px;">Price (INR)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">CBC</td>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">200</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">LFT</td>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">500</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">KFT</td>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">400</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">Lipid Profile</td>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">600</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">COVID-19 RT-PCR</td>
+          <td style="border: 1px solid #ff4d4d; padding:10px;">1500</td>
+        </tr>
+        <!-- Add more tests as needed -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Gallery -->
+  <h3 style="margin:40px 0 20px 15px;">📸 Hoshiarpur Lab Gallery</h3>
+  <div class="gallery" id="gallery">
+    <img class="gallery-img" src="img/Hoshiarpur2.jpeg" alt="Lab Equipment" />
+    <img class="gallery-img" src="img/Hoshiarpur3.jpg" alt="Testing Process" />
+    <img class="gallery-img" src="img/Hoshiarpur4.avif" alt="Sample Collection" />
+    <img class="gallery-img" src="img/Hoshiarpur5.jpeg" alt="Laboratory Interior" />
+    <!-- Replace with your images -->
+  </div>
+
+  <!-- Contact -->
+  <h3 id="contact" style="margin-top:40px;">📞 Contact Our Hoshiarpur Center</h3>
+  <p><strong>Phone:</strong> 9646782839 (24/7 Helpline)</p>
+  <p><strong>WhatsApp:</strong> <a href="https://wa.me/919646782839" style="color:#25D366; text-decoration: underline;">Click to Chat</a></p>
+  <p><strong>Location:</strong> Near Civil Hospital, Hoshiarpur, Punjab - 144001</p>
+  <p><strong>Timings:</strong> 7:00 AM to 7:00 PM (Home collection available 7 days a week)</p>
+  <p><strong>Email:</strong> <a href="mailto:support@skystrembloodtest.com" style="color:#ff9999;">support@skystrembloodtest.com</a></p>
+  <p><strong>Emergency Services:</strong> Available for critical cases (call for arrangements)</p>
+
+  <div class="btn-container">
+    <a class="call-btn" href="tel:+919646782839">📲 Book a Home Collection</a>
+    <a class="whatsapp-btn" href="https://wa.me/919646782839" target="_blank">💬 WhatsApp Us Now</a>
+  </div>
+
+  <div class="health-tip">
+    <strong>Did You Know?</strong> Many insurance providers now cover diagnostic tests. We support all major insurance cards.
+  </div>
+
+  <!-- Floating Call Button -->
+  <a href="tel:+919646782839" class="floating-call-btn" title="Call Now">📞</a>
+
+  <!-- Testimonials Section -->
+  <div class="content" id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div style="margin-top:20px;">
+      <blockquote style="background-color: rgba(255,255,255,0.1); padding:15px; border-radius:8px; margin-bottom:20px;">
+        <p>"Skystrem's blood testing services in Hoshiarpur are exceptional! Quick results and professional staff. Highly recommended." </p>
+        <footer>- Rajesh K., Hoshiarpur</footer>
+      </blockquote>
+      <blockquote style="background-color: rgba(255,255,255,0.1); padding:15px; border-radius:8px; margin-bottom:20px;">
+        <p>"Reliable and affordable health checkups. The home sample collection was very convenient." </p>
+        <footer>- Priya S., Hoshiarpur</footer>
+      </blockquote>
+      <blockquote style="background-color: rgba(255,255,255,0.1); padding:15px; border-radius:8px; margin-bottom:20px;">
+        <p>"Excellent NABL certified labs and friendly staff. My go-to place for diagnostics in Hoshiarpur." </p>
+        <footer>- Aman T., Hoshiarpur</footer>
+      </blockquote>
+    </div>
+  </div>
+
+  <!-- FAQ Section -->
+  <div class="content" id="faq">
+    <h2>Frequently Asked Questions (FAQs)</h2>
+    <div style="margin-top:20px;">
+      <h3>1. How do I book a blood test in Hoshiarpur?</h3>
+      <p>You can book your blood test online through our website, via WhatsApp, or by calling our helpline. We also offer home sample collection for your convenience.</p>
+      
+      <h3>2. Are your labs NABL accredited?</h3>
+      <p>Yes, all our laboratories are NABL accredited, ensuring accurate and reliable test results.</p>
+      
+      <h3>3. How long does it take to get test results?</h3>
+      <p>Most results are available within 24-48 hours, depending on the test. You will be notified once your results are ready.</p>
+      
+      <h3>4. Do you offer home sample collection?</h3>
+      <p>Yes, we provide doorstep sample collection across Hoshiarpur and nearby areas for your convenience.</p>
+      
+      <h3>5. Which health insurance plans do you accept?</h3>
+      <p>We accept most major insurance plans. Please contact us or check with your insurer for coverage details.</p>
+    </div>
+  </div>
+
+  <!-- Tests / Services Content (already part of your main content) -->
+  <!-- If you want a dedicated "Tests" section, you can add it here -->
+  <div class="content" id="tests">
+    <h2>Our Comprehensive Blood Tests in Hoshiarpur</h2>
+    <p>We offer a wide range of diagnostic tests to meet your health needs, including:</p>
+    <ul>
+      <li><strong>Routine Tests:</strong> CBC, Lipid Profile, Blood Glucose, Liver & Kidney Function, Thyroid Panel</li>
+      <li><strong>Infection Tests:</strong> COVID-19 RT-PCR, Hepatitis B & C, HIV, Malaria, Dengue</li>
+      <li><strong>Women & Children:</strong> Pregnancy Tests, Hormonal Tests, Pediatric Tests</li>
+      <li><strong>Advanced Diagnostics:</strong> Cancer Markers, Cardiac Markers, Genetic Tests</li>
+    </ul>
+    <p>For detailed test information and packages, please visit the respective sections or contact us directly.</p>
+  </div>
+
+  <!-- Footer remains the same -->
+  <footer>
+    <p>
+      <a href="#home">Home</a> | 
+      <a href="#hoshiarpur">Hoshiarpur</a> | 
+      <a href="#privacy">Privacy Policy</a> | 
+      <a href="#terms">Terms of Service</a>
+    </p>
+    <p>© 2025 Skystrem Blood Test Agency. All rights reserved.</p>
+    <p>NABL Accredited | ISO 9001:2015 Certified | Recognized by Punjab Health Department</p>
+  </footer>
+
+  <!-- Script for Lightbox -->
+  <script>
+    const galleryImages = document.querySelectorAll('.gallery-img');
+    const lightboxOverlay = document.createElement('div');
+    lightboxOverlay.id = 'lightboxOverlay';
+    lightboxOverlay.style.position = 'fixed';
+    lightboxOverlay.style.top = 0;
+    lightboxOverlay.style.left = 0;
+    lightboxOverlay.style.width = '100%';
+    lightboxOverlay.style.height = '100%';
+    lightboxOverlay.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+    lightboxOverlay.style.display = 'none';
+    lightboxOverlay.style.justifyContent = 'center';
+    lightboxOverlay.style.alignItems = 'center';
+    lightboxOverlay.style.zIndex = 1000;
+    document.body.appendChild(lightboxOverlay);
+    const lightboxImg = document.createElement('img');
+    lightboxImg.style.maxWidth = '90%';
+    lightboxImg.style.maxHeight = '90%';
+    lightboxOverlay.appendChild(lightboxImg);
+
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxOverlay.style.display = 'flex';
+      });
+    });
+
+    lightboxOverlay.addEventListener('click', () => {
+      lightboxOverlay.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
